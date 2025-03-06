@@ -1,0 +1,122 @@
+  
+ body {
+    background-image: url("/public/img/diary.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+ .user {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 18px;
+    color: #4caf50;
+  }
+  
+  .user span {
+    font-weight: bold;
+  }
+  
+  h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+  }
+
+  h4 {
+    text-align: center;
+    font-size: 24px;
+    color: #4caf50;
+    margin-bottom: 20px;
+  }
+  
+  .img-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+  }
+  
+  .img-wrapper {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .img-wrapper:hover {
+    transform: scale(1.05); /* Hover-efekti */
+  }
+  
+  .img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .img-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(76, 175, 80, 0.8); /* Puoliläpinäkyvä vihreä */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #4caf50; /* Vihreä tausta */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  /* Responsiivisuus */
+  @media screen and (max-width: 768px) {
+    .menu-toggle {
+      display: block; /* Näytä menu-toggle pienillä näytöillä */
+    }
+  
+    .menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: #4caf50;
+      border-radius: 4px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  
+    .menu.show {
+      display: flex;
+    }
+  
+    .menu li {
+      margin: 10px 0;
+    }
+  
+    .img-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .img-wrapper {
+      width: 80%;
+      height: 150px;
+    }
+  }

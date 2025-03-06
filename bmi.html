@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/styles/bmi.css" />
+    <title>MyHealth</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <span class="logo">MyHealth</span>
+        <button class="menu-toggle">☰</button>
+        <ul class="menu">
+            <li class="dropdown">
+                <a href="home.html">Home</a>
+            </li>
+          <li class="dropdown">
+            <a href="#">Categories</a>
+            <div class="dropdown-content">
+                <a href="daily.html">Daily entries</a>
+                <a href="medication.html">Medications</a>
+                <a href="measurements.html">Measurements</a>
+                <a href="bmi.html">Bmi calculator</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">Options</a>
+            <div class="dropdown-content">
+                <a href="settings.html">Settings</a>
+                <a href="help.html">Help</a>
+                <a href="contact.html">Contact us</a>
+            </div>
+          </li>
+          <li class="logout"><a href="index.html">Log Out</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+        <section>
+          <img src="public/img/bmi-img.png" alt="bmi-luokat" class="bmi-image" />
+          <h1>Painoindeksilaskuri / BMI-laskuri</h1>
+          <p>
+            Painoindeksilaskurilla voit laskea pituuden ja painon perusteella
+            painoindeksin (BMI, Body Mass Index).
+          </p>
+  
+          <div class="form-group">
+            <label for="weight">Anna painosi:</label>
+            <input type="number" id="weight" placeholder="kg" />
+          </div>
+          <div class="form-group">
+            <label for="height">Anna pituutesi:</label>
+            <input type="number" id="height" placeholder="cm" />
+          </div>
+          <button id="calculate">Laske indeksi</button>
+  
+          <div class="result">
+            <p>Mittaustuloksesi: <span id="bmi-result">0</span></p>
+  
+            <table class="result-table">
+              <tr>
+                <th>Kategoria</th>
+                <th>BMI</th>
+              </tr>
+              <tr id="underweight-row">
+                <td>Alipaino</td>
+                <td>0 - 18.9</td>
+              </tr>
+              <tr id="normal-row">
+                <td>Normaali paino</td>
+                <td>19 - 24.9</td>
+              </tr>
+              <tr id="overweight-row">
+                <td>Ylipaino</td>
+                <td>25.0 - 40.0 tai enemmän</td>
+              </tr>
+            </table>
+  
+            <p class="analysis" id="analysis">
+              Tähän saat tietoa painoindeksistäsi.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        © Rosamari - MyHealth 2025. All rights reserved.
+      </footer>
+
+    <script type="module" src="src/js/bmi.js"></script>
+  </body>
+</html>

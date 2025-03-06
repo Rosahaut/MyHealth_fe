@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medications</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <span class="logo">HealthDiary</span>
+        <button class="menu-toggle">☰</button>
+        <ul class="menu">
+          <li class="dropdown">
+            <a href="home.html">Home</a>
+          </li>
+          <li class="dropdown">
+            <a href="#">Categories</a>
+            <div class="dropdown-content">
+              <a href="daily.html">Daily entries</a>
+              <a href="medication.html">Medications</a>
+              <a href="measurements.html">Measurements</a>
+              <a href="bmi.html">Bmi calculator</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">Options</a>
+            <div class="dropdown-content">
+              <a href="settings.html">Settings</a>
+              <a href="help.html">Help</a>
+              <a href="contact.html">Contact us</a>
+            </div>
+          </li>
+          <li class="logout"><a href="index.html">Log Out</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="medication-background">
+      <form id="medication-form">
+        <h3>Add New Medication</h3>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required /><br /><br />
+
+        <label for="name">Medication Name:</label>
+        <input type="text" id="name" name="name" minlength="3" maxlength="30" required
+        /><br /><br />
+
+        <label for="dosage">Dosage:</label>
+        <input type="text" id="dosage" name="dosage" minlength="1" maxlength="10" required
+        /><br /><br />
+
+        <label for="taken_at">Taken At:</label>
+        <input type="time" id="taken_at" name="taken_at" required /><br /><br />
+
+        <label for="notes">Notes:</label>
+        <input type="text" id="notes" name="notes" placeholder="Example: Work was demanding." minlength="0" maxlength="300"
+        ><br /><br />
+
+        <input type="hidden" id="created_at" name="created_at" value="" />
+        <button type="submit">Add Medication</button>
+      </form>
+      <button id="fetch-medications">Medication history</button>
+
+      <div class="table-container">
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Name</th>
+              <th>Dosage</th>
+              <th>Taken At</th>
+              <th>Notes</th>
+              <th>Edit</th>
+            </tr>
+          </thead>
+          <tbody class="tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Edit-modali -->
+    <div id="edit-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">×</span>
+        <form id="edit-form">
+          <h3>Edit Medication</h3>
+          <input type="hidden" id="edit-medication-id" name="medication-id" required
+          />
+
+          <label for="edit-medication-date">Date:</label>
+          <input type="date" id="edit-medication-date" name="date" required />
+
+          <label for="edit-name">Medication name:</label>
+          <input type="text" id="edit-name" name="name" minlength="3" maxlength="30" required
+          /><br /><br />
+
+          <label for="edit-dosage">dosage:</label><br />
+          <input type="text" id="edit-dosage" name="dosage" minlength="1" maxlength="10" required
+          />
+
+          <label for="edit-taken-at">Taken At:</label><br />
+          <input type="time" id="edit-taken-at" name="taken-at" required
+          />
+
+          <label for="edit-notes">Notes:</label><br />
+          <input type="text" id="edit-notes" name="notes" minlength="0" maxlength="300"
+          />
+
+          <button type="submit">Update medication</button>
+          <button type="button" id="delete-entry" class="delete-button">Delete medication</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="toast-container"></div>
+
+    <footer>© Rosamari - MyHealth 2025. All rights reserved.</footer>
+
+    <script type="module" src="src/js/medication.js"></script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyHealth</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <span class="logo">MyHealth</span>
+        <button class="menu-toggle">☰</button>
+        <ul class="menu">
+          <li class="dropdown">
+            <a href="#">Categories</a>
+            <div class="dropdown-content">
+              <a href="daily.html">Daily entries</a>
+              <a href="medication.html">Medications</a>
+              <a href="measurements.html">Measurements</a>
+              <a href="bmi.html">Bmi calculator</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">Options</a>
+            <div class="dropdown-content">
+                <a href="settings.html">Settings</a>
+                <a href="help.html">Help</a>
+                <a href="contact.html">Contact us</a>
+            </div>
+          </li>
+          <li class="logout"><a href="index.html">Log Out</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="user">
+      Wellcome <span id="name"></span>!
+    </div>
+    <h4>Choose Category:</h4>
+    <div class="img-container">
+      <div class="img-wrapper" onclick="window.location.href='daily.html';">
+        <img src="/img/checklist.jpg" alt="Daily entries" />
+        <div class="img-text">Daily entries</div>
+      </div>
+      <div class="img-wrapper" onclick="window.location.href='medication.html';">
+        <img src="/img/medicine.jpg" alt="Medications" />
+        <div class="img-text">Medications</div>
+      </div>
+      <div class="img-wrapper" onclick="window.location.href='measurements.html';">
+        <img src="/img/measurements.jpg" alt="Measurements" />
+        <div class="img-text">Measurements</div>
+      </div>
+      <div class="img-wrapper" onclick="window.location.href='bmi.html';">
+        <img src="/img/scale.jpg" alt="bmi calculator" />
+        <div class="img-text">Bmi calculator</div>
+      </div>
+    </div>
+    <div id="toast-container"></div>
+
+    <footer>
+        © Rosamari - MyHealth 2025. All rights reserved.
+    </footer>
+
+    <script type="module" src="src/js/home.js"></script>
+  </body>
+</html>

@@ -1,0 +1,144 @@
+body {
+    background-image: url("/public/img/measurements.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); /* Varjostus */
+  }
+  
+  .styled-table thead tr {
+    background-color: var(--pink); /* Otsikon tausta */
+    color: #ffffff;
+    text-align: left;
+  }
+  
+  .styled-table th,
+  .styled-table td {
+    padding: 12px 15px;
+  }
+  
+  .styled-table tbody tr {
+    border-bottom: 1px solid #dddddd; /* Viivat rivien välissä */
+  }
+  
+  .styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3; /* Parillisten rivien tausta */
+  }
+  
+  .styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879; /* Viimeisen rivin alleviivaus */
+  }
+  
+  .styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879; /* Aktiivisen rivin tyyli */
+  }
+  
+  .styled-table tbody tr:hover {
+    background-color: #68535358; /* Hover-efekti */
+    cursor: pointer;
+  }
+
+  form {
+    background-color: var(--pink); /* Lomakkeen tausta */
+    color: #ffffff;
+    padding: 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    width: 300px;
+    font-size: 0.9em;
+    font-family: sans-serif;
+  }
+  
+  input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box; /* Input-kenttien tyyli */
+  }
+
+  .card-area {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap; /* Korttien asettelu */
+  }
+  
+  .card {
+    min-height: 300px;
+    width: 400px;
+    background-color: #f3f3f3; /* Kortin tausta */
+    display: flex;
+    padding: 1em;
+    box-shadow: 11px 8px 19px 0px rgb(2, 2, 2); /* Varjostus */
+    border-radius: 30px; /* Pyöristetyt kulmat */
+    gap: 20px;
+  }
+  
+  .card-img {
+    flex: 1;
+    object-fit: cover;
+  }
+  
+  .card-img img {
+    width: 100px; /* Kuvan koko */
+  }
+  
+  .card-diary {
+    flex: 4; /* Tekstiosan leveys */
+  }
+
+  pre {
+    background-color: aliceblue; /* Pre-elementin tausta */
+  }
+  
+  dialog {
+    top: 50%;
+    transform: translateY(-50%); /* Dialogin keskittäminen */
+  }
+  
+  ::backdrop {
+    background-image: linear-gradient(
+      45deg,
+      magenta,
+      rebeccapurple,
+      dodgerblue,
+      green
+    ); /* Dialogin tausta */
+    opacity: 0.75;
+  }
+  
+  #bgimage {
+    background-image: url('../img/diary.jpg'); /* Taustakuva */
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 300px;
+    height: 400px;
+  }
+
+  @media screen and (max-width: 800px) {
+    .forms {
+      flex-direction: column; /* Lomakkeet pinoontuvat pieni näytöillä */
+    }
+  }
+  
+  @media (prefers-color-scheme: light) {
+    :root {
+      color: #213547;
+      background-color: #ffffff; /* Vaalea teema */
+    }
+    a:hover {
+      color: #747bff;
+    }
+    button {
+      background-color: #f9f9f9; /* Painikkeen tausta vaaleassa teemassa */
+    }
+  }
