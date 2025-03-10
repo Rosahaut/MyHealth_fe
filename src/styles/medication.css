@@ -96,7 +96,7 @@ button#fetch-medications:hover {
 
 .table-controller {
   overflow-y: auto;
-  height: 450px;
+  height: 500px;
   margin-top: 20px;
 }
 
