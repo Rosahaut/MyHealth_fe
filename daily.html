@@ -3,12 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap"
+      rel="stylesheet"
+    />
     <title>MyHealth</title>
   </head>
   <body>
     <header>
       <nav>
-        <span class="logo">MyHealth</span>
+        <div class="logo">
+          <span class="logo-part1">My</span>
+          <span class="logo-part2">Health</span>
+        </div>
         <button class="menu-toggle">☰</button>
         <ul class="menu">
           <li class="dropdown">
@@ -27,8 +36,6 @@
             <a href="#">Options</a>
             <div class="dropdown-content">
               <a href="settings.html">Settings</a>
-              <a href="help.html">Help</a>
-              <a href="contact.html">Contact us</a>
             </div>
           </li>
           <li class="logout"><a href="index.html">Log Out</a></li>
@@ -37,61 +44,69 @@
     </header>
 
     <div class="daily-container">
-      <form id="daily-form">
-        <h3>Add new daily entry</h3>
-        <label for="date">Date:</label>
-        <input type="date" id="date" name="entry_date" required />
+      <!-- Left column: Form -->
+      <div class="daily-form-container">
+        <form id="daily-form">
+          <h3>Add new daily entry</h3>
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="entry_date" required />
 
-        <label for="type">Mood:</label>
-        <select id="type" name="mood" required>
-          <option value="Happy">Happy</option>
-          <option value="Satisfied">Satisfied</option>
-          <option value="Tired">Tired</option>
-          <option value="Energetic">Energetic</option>
-          <option value="Relaxed">Relaxed</option>
-          <option value="Exhausted">Exhausted</option>
-          <option value="Sad">Sad</option>
-        </select>
+          <label for="type">Mood:</label>
+          <select id="type" name="mood" required>
+            <option value="Happy">Happy</option>
+            <option value="Satisfied">Satisfied</option>
+            <option value="Tired">Tired</option>
+            <option value="Energetic">Energetic</option>
+            <option value="Relaxed">Relaxed</option>
+            <option value="Exhausted">Exhausted</option>
+            <option value="Sad">Sad</option>
+          </select>
 
-        <label for="sleep">Sleep:</label>
-        <input
-          type="number"
-          id="sleep"
-          name="sleep_hours"
-          placeholder="hours"
-          required
-        /><br /><br />
+          <label for="sleep">Sleep:</label>
+          <input
+            type="number"
+            id="sleep"
+            name="sleep_hours"
+            placeholder="hours"
+            min="0"
+            required
+          /><br /><br />
 
-        <label for="notes">Notes:</label><br />
-        <input
-          type="text"
-          id="notes"
-          name="notes"
-          placeholder="Example: Work was demanding."
-          minlength="0"
-          maxlength="300"
-        />
-        <input type="hidden" id="created_at" name="created_at" value="" />
-        <button type="submit">Add daily entry</button>
-      </form>
-      <button id="fetch-data">Entry history</button>
+          <label for="notes">Notes:</label><br />
+          <input
+            type="text"
+            id="notes"
+            name="notes"
+            placeholder="Example: Hard day's work behind."
+            minlength="0"
+            maxlength="300"
+          />
+          <input type="hidden" id="created_at" name="created_at" value="" />
+          <button type="submit">Add daily entry</button>
+        </form>
+      </div>
+
+      <!-- Right column: Table -->
       <div class="table-container">
-        <table class="styled-table">
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Mood</th>
-              <th>Sleep</th>
-              <th>Notes</th>
-              <th>Edit</th>
-            </tr>
-          </thead>
-          <tbody class="tbody"></tbody>
-        </table>
+        <button id="fetch-data">Entry history</button>
+        <div class="table-controller">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Mood</th>
+                <th>Sleep</th>
+                <th>Notes</th>
+                <th>Edit</th>
+              </tr>
+            </thead>
+            <tbody class="tbody"></tbody>
+          </table>
+        </div>
       </div>
     </div>
 
-    <!-- Edit-modali -->
+    <!-- Edit-modal -->
     <div id="edit-modal" class="modal">
       <div class="modal-content">
         <span class="close-button">×</span>
@@ -137,7 +152,7 @@
 
           <button type="submit">Update entry</button>
           <button type="button" id="delete-entry" class="delete-button">
-            Delete Entry
+            Delete entry
           </button>
         </form>
       </div>
@@ -150,5 +165,6 @@
     </footer>
 
     <script type="module" src="./src/js/daily.js"></script>
+    <script type="module" src="src/js/toast.js"></script>
   </body>
 </html>

@@ -1,119 +1,373 @@
-
-  
- body {
-    background-image: url("/img/diary.jpg");
-    background-size: cover;
-    background-position: center;
+:root {
+  font-family: 'Madimi One', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-#aboutModal .modal-content {
-    background-color: #fefefe;
-    margin: 10% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 60%;
-    max-width: 800px;
-    border-radius: 10px;
+body {
+  background-image: url("/img/book.jpg");
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  text-align: center;
+}
+
+header {
+  background: linear-gradient(to right, rgba(52, 152, 219, 0.7), rgba(231, 76, 60, 0.7));
+  padding: 15px 30px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.logo-part1 {
+  color: rgb(161, 69, 59);
+}
+
+.logo-part2 {
+  color: rgb(10, 50, 77);
+}
+
+.menu {
+  padding-right: 30px;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: antiquewhite;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-left: auto;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #f0f0f0;
+  text-decoration: underline;
+}
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 50px;
+  min-height: 60vh;
+  font-size: 18px;
+  color: black;
+}
+
+.index-container {
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.image-container {
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  clip-path: circle(50% at 50% 50%);
+  object-fit: cover;
+}
+
+.app-title {
+  font-size: 35px;
+  color: black;
+}
+
+.app-start {
+  font-size: 20px;
+  color: rgb(119, 36, 26);
+}
+
+button {
+  background: linear-gradient(to top, rgba(52, 152, 219, 0.7), rgba(231, 76, 60, 0.7));
+  color: black;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px;
+  font-size: 18px;
+  font-family: 'Madimi One', sans-serif;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+}
+
+.modal-content {
+  background-color: rgb(14, 13, 13);
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  color: antiquewhite;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #333;
+}
+
+.modal-content h2 {
+  font-size: 30px;
+  color: rgb(161, 69, 59);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.modal-content p {
+  color: rgb(161, 69, 59);
+}
+
+.modal-content label {
+  font-size: 18px;
+  color: rgb(161, 69, 59);
+  margin-bottom: 5px;
+  display: block;
+  width: 80%;
+  text-align: left;
+}
+
+.modal-content input {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Madimi One', sans-serif;
+}   
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to right, rgba(52, 152, 219, 0.7), rgba(231, 76, 60, 0.7));
+  color: black;
+  margin-top: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+/* Responsiivisuus */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
   }
 
-  h1 {
-    font-size: 3.2em;
-    line-height: 1.1;
-  }
-  
-  #aboutModal h2 {
-    color: #1e3a8a; 
-    margin-bottom: 20px;
-  }
-  
-  #aboutModal h3 {
-    color: #1e3a8a; 
-    margin-top: 20px;
+  .logo {
+    margin-left: 0;
     margin-bottom: 10px;
   }
-  
-  #aboutModal p {
-    color: #333; 
-    line-height: 1.6;
-    margin-bottom: 15px;
+
+  .menu {
+    padding-right: 0;
   }
-  
-  .welcome-section {
-    padding: 40px 20px;
-    text-align: center;
-    margin-bottom: 20px;
+
+  .menu-toggle {
+    display: block;
   }
-  
-  .welcome-section .container {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .welcome-section .app-title {
-    font-size: 2.5em;
-    color: #1e3a8a;
-    margin-bottom: 20px;
-  }
-  
-  .welcome-section .app-description {
-    font-size: 1.2em;
-    color: #333; /* Tumma harmaa */
-    line-height: 1.6;
-    margin-bottom: 20px;
-  }
-  
-  .welcome-section .app-start {
-    font-size: 1em;
-    color: #555; /* Vaaleanharmaa */
-    font-style: italic;
-  }
-  
-  .login_section {
-    margin: auto;
-    width: 100vw;
-    max-width: 1200px;
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-  }
-  
-  .login-button, .signin-button {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    font-size: 16px;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-      "Lucida Sans", Arial, sans-serif;
-    transition: background-color 0.3s ease;
-  }
-  
-  .login-button:hover, .signin-button:hover {
-    background-color: #45a049;
-  }
-  
-  .modal {
+
+  nav ul {
     display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
+    flex-direction: column;
     width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
   }
-  
-  .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  .welcome-section {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 30px;
+  }
+
+  .index-container {
     padding: 20px;
-    border: 1px solid #888;
-    width: 30%;
-    border-radius: 10px;
   }
+
+  .image-container {
+    float: none;
+    margin: 0 auto 20px;
+  }
+
+  .app-title {
+    font-size: 28px;
+  }
+
+  .app-start {
+    font-size: 18px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .modal-content h2 {
+    font-size: 24px;
+  }
+
+  .modal-content p {
+    font-size: 16px;
+  }
+
+  .modal-content label {
+    font-size: 16px;
+  }
+
+  .modal-content input {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 24px;
+  }
+
+  .welcome-section {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+  }
+
+  .index-container {
+    padding: 15px;
+  }
+
+  .app-title {
+    font-size: 24px;
+  }
+
+  .app-start {
+    font-size: 16px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .modal-content {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .modal-content h2 {
+    font-size: 20px;
+  }
+
+  .modal-content p {
+    font-size: 14px;
+  }
+
+  .modal-content label {
+    font-size: 14px;
+  }
+
+  .modal-content input {
+    font-size: 12px;
+  }
+}

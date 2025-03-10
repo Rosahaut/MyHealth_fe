@@ -1,13 +1,14 @@
 body {
-    background-image: url("/public/img/scale.jpg");
+    background-image: url("/img/scale.jpg");
     background-size: cover;
     background-position: center;
+    margin: 0;
+    padding: 0;
+    color: black;
 }
 
 section {
-    background-image: url("/public/img/background1.png");
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(to top, rgba(52, 152, 219, 0.7), rgba(231, 76, 60, 0.7));
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -37,8 +38,6 @@ section {
   }
   
   .form-group {
-    display: flex;
-    justify-content: space-between;
     margin-bottom: 10px;
   }
   
@@ -61,11 +60,12 @@ section {
     width: 100%;
     padding: 10px;
     font-size: 1rem;
-    color: black;
-    background-color: #8cbaec;
+    color: antiquewhite;
+    background-color: #41566c;
     border-color: #5b80ad;
     border-radius: 5px;
     cursor: pointer;
+    font-family: 'Madimi One', sans-serif;
   }
   
   button:hover {
@@ -92,7 +92,8 @@ section {
   
   .result-table tr,
   .result-table th {
-    background-color: #8cbaec;
+    background-color:  #41566c;
+    color: antiquewhite;
   }
   
   .highlight {

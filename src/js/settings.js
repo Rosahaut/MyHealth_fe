@@ -1,4 +1,5 @@
-import "../styles/style.css";
+import "../styles/main.css";
+import "../styles/settings.css";
 import { showToast } from "./toast.js";
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -59,53 +60,6 @@ document.addEventListener("DOMContentLoaded", function () {
     } catch (error) {
       console.error("Error updating user data:", error);
       showToast("Failed to update user data. Please try again.");
-    }
-  });
-
-  // Handle user account deletion
-  const deleteUserButton = document.getElementById("delete-user");
-  deleteUserButton.addEventListener("click", async function () {
-    const userId = localStorage.getItem("user_id");
-    const deleteConfirmInput = document.getElementById("delete-confirm").value;
-
-    if (deleteConfirmInput.toLowerCase() !== "delete user") {
-      showToast('You must type "delete user" to confirm deletion.');
-      return;
-    }
-
-    if (
-      !confirm(
-        "Are you sure you want to delete your account? This cannot be undone."
-      )
-    ) {
-      return;
-    }
-
-    const url = `http://localhost:3000/api/users`; // Updated URL
-    const token = localStorage.getItem("token");
-
-    try {
-      const response = await fetch(url, {
-        method: "DELETE",
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
-
-      const responseData = await response.json();
-
-      if (response.ok) {
-        showToast("Account deleted successfully.");
-        localStorage.removeItem("user_id");
-        localStorage.removeItem("token");
-        window.location.href = "index.html";
-      } else {
-        throw new Error(
-          responseData.message || "Failed to delete user account."
-        );
-      }
-    } catch (error) {
-      showToast("Failed to delete user account. Please try again.");
     }
   });
 

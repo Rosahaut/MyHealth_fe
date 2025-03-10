@@ -1,4 +1,5 @@
-import "../styles/style.css";
+import "../styles/main.css";
+import "../styles/medication.css";
 import { fetchData } from "./fetch.js";
 import { showToast } from "./toast.js";
 

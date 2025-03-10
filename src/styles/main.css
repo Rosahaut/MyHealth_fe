@@ -1,158 +1,224 @@
-:root {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  :root {
+    font-family: 'Madimi One', sans-serif;
     line-height: 1.5;
     font-weight: 400;
-    font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
   
-  * {
-    box-sizing: border-box;
-  }
-  
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f0f8ff; /* Vaaleansininen tausta */
-    color: #333; /* Tumma tekstiväri */
-    line-height: 1.6;
-  }
-  
   header {
-    background-color: #4caf50; /* Vihreä tausta */
-    padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    background: linear-gradient(to right, rgba(52, 152, 219, 0.9), rgba(231, 76, 60, 0.9));
+    padding: 15px 30px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+  
+  .logo {
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 20px;
+  }
+  
+  .logo-part1 {
+    color: rgb(161, 69, 59);
+  }
+  
+  .logo-part2 {
+    color: rgb(10, 50, 77);
+  }
+  
+  .menu {
+    padding-right: 30px;
+  }
+  
+  .menu-toggle {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
   }
   
   nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    width: 100%;
+    justify-content: space-between;
   }
   
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
-  }
-  
-  .menu-toggle {
-    display: none; /* Piilotetaan oletuksena */
-    font-size: 24px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .menu {
-    display: flex;
+  nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    margin-left: auto;
   }
   
-  .menu li {
-    margin-left: 20px;
+  nav ul li {
+    margin: 0 10px;
   }
   
-  .menu li a {
+  nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 16px;
-    padding: 8px 12px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
   }
   
-  .menu li a:hover {
-    background-color: #45a049; /* Tummempi vihreä hover-tilassa */
+  nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: antiquewhite;
+    text-decoration: underline;
+  }
+
+  .dropdown {
+    position: relative;
   }
   
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background: linear-gradient(to top, rgba(231, 76, 60, 0.7), rgba(52, 152, 219, 0.7));
     min-width: 160px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    border-radius: 5px;
   }
   
   .dropdown-content a {
-    color: #333;
+    color: antiquewhite;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    transition: background-color 0.3s ease;
+    text-align: left;
   }
   
   .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: rgba(255, 255, 255, 0.2);
   }
   
   .dropdown:hover .dropdown-content {
     display: block;
   }
 
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+  #toast-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999999;
   }
   
-  .close:hover,
-  .close:focus {
+  .toast {
+    display: flex;
+    align-items: center;
+    background-color: #84d9b0;
     color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  footer {
-    background-color: #70bd74;
     text-align: center;
-    margin-top: 30px;
-    height: 40px;
-    padding-top: 10px;
-    color: antiquewhite;
+    font-size: 18px;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    animation: slideIn 0.5s forwards, fadeOut 5s forwards;
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to right, rgba(52, 152, 219, 0.9), rgba(231, 76, 60, 0.9));
+    color: black;
+    margin-top: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    border-radius: 10px;
   }
 
   /* Responsiivisuus */
-@media screen and (max-width: 768px) {
-    .menu-toggle {
-      display: block;
-    }
-  
-    .menu {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      right: 20px;
-      background-color: #333;
-      border-radius: 4px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-  
-    .menu.show {
-      display: flex;
-    }
-  
-    .menu li {
-      margin: 10px 0;
-    }
-  
-    .daily-container {
-      padding: 10px;
-    }
-  
-    .modal-content {
-      width: 95%;
-    }
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
   }
+
+  .logo {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .menu {
+    padding-right: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  .dropdown-content {
+    position: static;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: none;
+  }
+
+  .dropdown-content a {
+    padding: 10px;
+  }
+
+  .toast {
+    font-size: 16px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 24px;
+  }
+
+  .menu-toggle {
+    font-size: 20px;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+  }
+
+  .dropdown-content {
+    min-width: 120px;
+  }
+
+  .dropdown-content a {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .toast {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

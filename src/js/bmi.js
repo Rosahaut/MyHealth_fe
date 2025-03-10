@@ -1,3 +1,5 @@
+import "../styles/main.css";
+import "../styles/bmi.css";
 window.onload = () => {
     document.getElementById("calculate").addEventListener("click", () => {
       const weight = parseFloat(document.getElementById("weight").value);

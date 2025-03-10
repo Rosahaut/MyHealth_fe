@@ -1,120 +1,344 @@
 body {
-    background-image: url("/public/img/checklist.jpg");
-    background-size: cover;
-    background-position: center;
+  font-family: 'Madimi One', sans-serif;
+  background-image: url("/img/diary.jpg");
+  background-size: cover;
+  margin: 0;
+  padding: 0;
 }
 
 .daily-container {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 30px auto;
+  max-width: 1200px;
+}
+
+.daily-form-container {
+  flex: 1;
+  background: linear-gradient(to top, rgba(52, 152, 219, 0.7), rgba(231, 76, 60, 0.7));
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 48%;
+}
+
+.daily-form-container h3 {
+  font-size: 24px;
+  color: black;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.daily-form-container label {
+  font-size: 18px;
+  color: black;
+}
+
+.daily-form-container input[type="text"],
+.daily-form-container input[type="date"],
+.daily-form-container input[type="number"],
+.daily-form-container select {
+  width: 95%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.daily-form-container button[type="submit"] {
+  font-family: 'Madimi One', sans-serif;
+  background-color: #41566c;
+  color: antiquewhite;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.daily-form-container button[type="submit"]:hover {
+  background-color: #2980b9;
+}
+
+.table-container {
+  width: 48%;
+  background: linear-gradient(to top, rgba(231, 76, 60, 0.7), rgba(52, 152, 219, 0.7));
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#fetch-data {
+  font-family: 'Madimi One', sans-serif;
+  background-color: #41566c;
+  color: antiquewhite;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#fetch-data:hover {
+  background-color: #2980b9;
+}
+
+.table-controller {
+  overflow-y: auto;
+  height: 450px;
+  margin-top: 20px;
+}
+
+thead {
+  position: sticky;
+  top: 0;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #41566c;
+}
+
+.styled-table th {
+  background-color: #41566c;
+  color: white;
+}
+
+.styled-table tbody tr:nth-child(odd) {
+  background-color: #e3d5d5;
+}
+
+.styled-table tr:nth-child(even) {
+  background-color: #c0bfee;
+}
+
+.styled-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+#edit-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-content h3 {
+  color: rgba(231, 76, 60);
+  font-size: 24px;
+  text-align: center;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 25px;
+  cursor: pointer;
+  color: antiquewhite;
+}
+
+.close-button:hover {
+  color: #a39a9a;
+}
+
+#edit-form {
+  margin-top: 20px;
+}
+
+label {
+  font-size: 18px;
+  color: rgba(231, 76, 60);
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+  width: 95%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-family: 'Madimi One', sans-serif;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.delete-button {
+  background-color: #e74c3c;
+  font-size: 18px;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
+/* Responsiivisuus */
+@media (max-width: 768px) {
+  .daily-container {
+    flex-direction: column;
+    gap: 20px;
   }
-  
-  .daily-container h3 {
-    color: var(--pink);
-    border-bottom: 2px solid var(--pink);
-    padding-bottom: 10px;
-  }
-  
-  form {
-    margin-bottom: 20px;
-  }
-  
-  form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  form input,
-  form select,
-  form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-  }
-  
-  form button {
-    background-color: var(--pink);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-  }
-  
-  form button:hover {
-    background-color: rgb(200, 100, 120);
-  }
-  
+
+  .daily-form-container,
   .table-container {
-    overflow-x: auto;
-  }
-  
-  .styled-table {
     width: 100%;
-    border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 0.9em;
-    font-family: sans-serif;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   }
-  
-  .styled-table thead tr {
-    background-color: var(--pink);
-    color: white;
-    text-align: left;
+
+  .daily-form-container h3 {
+    font-size: 20px;
   }
-  
+
+  .daily-form-container label {
+    font-size: 16px;
+  }
+
+  .daily-form-container input[type="text"],
+  .daily-form-container input[type="date"],
+  .daily-form-container input[type="number"],
+  .daily-form-container select {
+    font-size: 14px;
+  }
+
+  .daily-form-container button[type="submit"],
+  #fetch-data {
+    font-size: 16px;
+  }
+
+  .table-controller {
+    height: 300px;
+  }
+
   .styled-table th,
   .styled-table td {
-    padding: 12px 15px;
+    padding: 8px;
+    font-size: 14px;
   }
-  
-  .styled-table tbody tr {
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .styled-table tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
-  }
-  
-  .styled-table tbody tr:last-of-type {
-    border-bottom: 2px solid var(--pink);
-  }
-  
-  .styled-table tbody tr:hover {
-    background-color: #f1f1f1;
-    cursor: pointer;
-  }
-  
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 1001;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  
+
   .modal-content {
-    background-color: white;
-    margin: 10% auto;
-    padding: 20px;
-    border-radius: 8px;
-    width: 90%;
-    max-width: 500px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
   }
+
+  .modal-content h3 {
+    font-size: 20px;
+  }
+
+  label {
+    font-size: 16px;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  select {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .daily-form-container h3 {
+    font-size: 18px;
+  }
+
+  .daily-form-container label {
+    font-size: 14px;
+  }
+
+  .daily-form-container input[type="text"],
+  .daily-form-container input[type="date"],
+  .daily-form-container input[type="number"],
+  .daily-form-container select {
+    font-size: 12px;
+  }
+
+  .daily-form-container button[type="submit"],
+  #fetch-data {
+    font-size: 14px;
+  }
+
+  .table-controller {
+    height: 250px;
+  }
+
+  .styled-table th,
+  .styled-table td {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .modal-content {
+    padding: 10px;
+  }
+
+  .modal-content h3 {
+    font-size: 18px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  select {
+    font-size: 12px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}

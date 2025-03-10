@@ -1,8 +1,9 @@
-import "../styles/style.css";
+import "../styles/main.css";
+import "../styles/home.css";
 import { fetchData } from './fetch';
 import { showToast } from "./toast.js";
 
-// Navigaatiomenun avaaminen ja sulkeminen
+// Navigaatio menun avaaminen ja sulkeminen
 document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.querySelector(".menu-toggle");
   const menu = document.querySelector(".menu");

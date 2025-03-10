@@ -3,12 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap"
+      rel="stylesheet"
+    />
     <title>MyHealth</title>
   </head>
   <body>
     <header>
       <nav>
-        <span class="logo">MyHealth</span>
+        <div class="logo">
+          <span class="logo-part1">My</span>
+          <span class="logo-part2">Health</span>
+        </div>
         <button class="menu-toggle">☰</button>
         <ul class="menu">
           <li class="dropdown">
@@ -24,8 +33,6 @@
             <a href="#">Options</a>
             <div class="dropdown-content">
                 <a href="settings.html">Settings</a>
-                <a href="help.html">Help</a>
-                <a href="contact.html">Contact us</a>
             </div>
           </li>
           <li class="logout"><a href="index.html">Log Out</a></li>
@@ -34,25 +41,33 @@
     </header>
 
     <div class="user">
-      Wellcome <span id="name"></span>!
+      Nice to see you <span id="name"></span>!
     </div>
-    <h4>Choose Category:</h4>
-    <div class="img-container">
-      <div class="img-wrapper" onclick="window.location.href='daily.html';">
-        <img src="/img/checklist.jpg" alt="Daily entries" />
-        <div class="img-text">Daily entries</div>
+    <div class="home-container">
+      <div class="text-container">
+        <h3>" Your body is your home - take care of it and it will support you every step of the way "</h3>
+        <p>MyHealth is an easy-to-use application that allows you to monitor your health. 
+          You can record daily entries, track your medication, 
+          measure key health indicators and calculate your body mass index (BMI). 
+          To get started, tap the desired icon on the right or select a category from the top menu.</p>
       </div>
-      <div class="img-wrapper" onclick="window.location.href='medication.html';">
-        <img src="/img/medicine.jpg" alt="Medications" />
-        <div class="img-text">Medications</div>
-      </div>
-      <div class="img-wrapper" onclick="window.location.href='measurements.html';">
-        <img src="/img/measurements.jpg" alt="Measurements" />
-        <div class="img-text">Measurements</div>
-      </div>
-      <div class="img-wrapper" onclick="window.location.href='bmi.html';">
-        <img src="/img/scale.jpg" alt="bmi calculator" />
-        <div class="img-text">Bmi calculator</div>
+      <div class="img-container">
+        <div class="img-wrapper" onclick="window.location.href='daily.html';">
+          <img src="/img/diary.jpg" alt="Daily entries" />
+          <div class="img-text">Daily entries</div>
+        </div>
+        <div class="img-wrapper" onclick="window.location.href='medication.html';">
+          <img src="/img/medicine.jpg" alt="Medications" />
+          <div class="img-text">Medications</div>
+        </div>
+        <div class="img-wrapper" onclick="window.location.href='measurements.html';">
+          <img src="/img/measurements.jpg" alt="Measurements" />
+          <div class="img-text">Measurements</div>
+        </div>
+        <div class="img-wrapper" onclick="window.location.href='bmi.html';">
+          <img src="/img/scale.jpg" alt="bmi calculator" />
+          <div class="img-text">Bmi calculator</div>
+        </div>
       </div>
     </div>
     <div id="toast-container"></div>
@@ -62,5 +77,6 @@
     </footer>
 
     <script type="module" src="src/js/home.js"></script>
+    <script type="module" src="src/js/toast.js"></script>
   </body>
 </html>

@@ -1,5 +1,4 @@
 import "../styles/index.css";
-import "../styles/main.css";
 import { fetchData } from "./fetch.js";
 import { showToast } from "./toast.js";
 
@@ -91,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       body: JSON.stringify(data),
     };
-    //jotain häikkää...signup tallentaa rekisteröinnin mutta ei siirrä eteenpäin. backend antaa messagen mutta tulostaa myös jotain outoa.
+    
     console.log(options);
 
     try {

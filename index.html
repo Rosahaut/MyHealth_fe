@@ -14,7 +14,10 @@
   <body>
     <header>
       <nav>
-        <span class="logo">MyHealth</span>
+        <div class="logo">
+          <span class="logo-part1">My</span>
+          <span class="logo-part2">Health</span>
+        </div>
         <button class="menu-toggle">☰</button>
         <ul class="menu">
           <li>
@@ -30,25 +33,22 @@
         <span class="close">&times;</span>
         <h2>MyHealth – Your Personal Health diary</h2>
         <p>
-          MyHealth is a user-friendly and helps you to monitor and maintain your well-being. It allows you to easily track key aspects of your health, including exercise, heart rate variability (HRV), and medication.
-        </p>
-        <h3>Measurements</h3>
-        <p>
-          Record your vital signs measurements.
-        </p>
-        <h3>Medications</h3>
-        <p>
-          Keep track of your medications, dosages, and when you have taken it.
-        </p>
-        <p>
-          With MyHealth, you can take a proactive approach to your health by making informed choices and building better habits for a healthier, happier life!
+          MyHealth is a user-friendly app that helps you monitor and maintain your well-being. 
+          It allows you to effortlessly track key aspects of your health, 
+          such as basic vital signs measurements and medication. 
+          Keep track of your medications, dosages, and when you have taken them. 
+          With MyHealth, you can take control of your health by making informed choices and 
+          developing better habits for a healthier, happier life!
         </p>
       </div>
     </div>
 
     <section class="welcome-section">
-      <div class="container">
-        <h1 class="app-title">Tervetuloa MyHealth -sovellukseen</h1>
+      <div class="index-container">
+        <h1 class="app-title">Welcome to MyHealth app</h1>
+        <div class="image-container">
+          <img src="/img/dandelion.jpg" alt="Terveyskuva">
+        </div>
         <p class="app-description">
           MyHealth empowers you to take control of your health by providing comprehensive 
           tracking and insightful data to support informed decisions. 
@@ -56,8 +56,8 @@
           companion on the path to a healthier, happier life!
         </p>
         <p class="app-start">
-          Kirjaudu sisään jatkaaksesi sovelluksen käyttöä. 
-          Eikö sinulla ole vielä käyttäjää? Luo käyttäjä aloittaaksesi sovelluksen käyttö.
+          Log in to continue using the app. 
+          Don't have a user yet? Sign up to start using the app.
         </p>
       </div>
     </section>
@@ -72,9 +72,9 @@
       <form class="modal-content">
         <span class="close">&times;</span>
         <h2>Log in</h2>
-        <label for="username">Username</label>
+        <label for="username">Username:</label>
         <input type="text" name="username" placeholder="Username" />
-        <label for="password">Password</label>
+        <label for="password">Password:</label>
         <input type="password" name="password" placeholder="Password" />
         <button type="submit" class="loginuser">Login</button>
       </form>

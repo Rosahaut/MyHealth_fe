@@ -3,13 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/styles/bmi.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap"
+      rel="stylesheet"
+    />
     <title>MyHealth</title>
   </head>
   <body>
     <header>
       <nav>
-        <span class="logo">MyHealth</span>
+        <div class="logo">
+          <span class="logo-part1">My</span>
+          <span class="logo-part2">Health</span>
+        </div>
         <button class="menu-toggle">☰</button>
         <ul class="menu">
             <li class="dropdown">
@@ -28,8 +36,6 @@
             <a href="#">Options</a>
             <div class="dropdown-content">
                 <a href="settings.html">Settings</a>
-                <a href="help.html">Help</a>
-                <a href="contact.html">Contact us</a>
             </div>
           </li>
           <li class="logout"><a href="index.html">Log Out</a></li>
@@ -39,47 +45,47 @@
 
     <main>
         <section>
-          <img src="public/img/bmi-img.png" alt="bmi-luokat" class="bmi-image" />
-          <h1>Painoindeksilaskuri / BMI-laskuri</h1>
+          <img src="/img/bmi-img.png" alt="bmi-luokat" class="bmi-image" />
+          <h1>Body Mass Index Calculator / BMI Calculator</h1>
           <p>
-            Painoindeksilaskurilla voit laskea pituuden ja painon perusteella
-            painoindeksin (BMI, Body Mass Index).
+            With the BMI calculator, you can calculate the body mass index (BMI) 
+            based on height and weight.
           </p>
   
           <div class="form-group">
-            <label for="weight">Anna painosi:</label>
+            <label for="weight">Enter your weight:</label>
             <input type="number" id="weight" placeholder="kg" />
           </div>
           <div class="form-group">
-            <label for="height">Anna pituutesi:</label>
+            <label for="height">Enter your height:</label>
             <input type="number" id="height" placeholder="cm" />
           </div>
-          <button id="calculate">Laske indeksi</button>
+          <button id="calculate">Calculate index</button>
   
           <div class="result">
-            <p>Mittaustuloksesi: <span id="bmi-result">0</span></p>
+            <p>Measurement results: <span id="bmi-result"></span></p>
   
             <table class="result-table">
               <tr>
-                <th>Kategoria</th>
+                <th>Category</th>
                 <th>BMI</th>
               </tr>
               <tr id="underweight-row">
-                <td>Alipaino</td>
+                <td>Underweight</td>
                 <td>0 - 18.9</td>
               </tr>
               <tr id="normal-row">
-                <td>Normaali paino</td>
+                <td>Normal weight</td>
                 <td>19 - 24.9</td>
               </tr>
               <tr id="overweight-row">
-                <td>Ylipaino</td>
-                <td>25.0 - 40.0 tai enemmän</td>
+                <td>Excess weight</td>
+                <td>25.0 - 40.0 or more</td>
               </tr>
             </table>
   
             <p class="analysis" id="analysis">
-              Tähän saat tietoa painoindeksistäsi.
+              Here you can get information about your body mass index.
             </p>
           </div>
         </section>
@@ -90,5 +96,6 @@
       </footer>
 
     <script type="module" src="src/js/bmi.js"></script>
+    <script type="module" src="src/js/toast.js"></script>
   </body>
 </html>
