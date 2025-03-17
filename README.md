@@ -17,7 +17,7 @@ Python oli jo asennettuna, version tarkistin komennolla:
 ```bash
 python --version
 ```
-Tulos: **Python 3.13.1** 
+Tulos: ***Python 3.13.1*** 
 
 ### 1.2 Virtuaaliympäristön luominen
 Virtuaaliympäristön luonti ja aktivointi:
@@ -37,33 +37,33 @@ Kun virtuaaliympäristö oli aktivoitu, tarkistin että python pakettien asentaj
 ```bash
 python -m pip install --upgrade pip
 ```
-Tulos: **Successfully installed pip-25.0.1** 
+Tulos: ***Successfully installed pip-25.0.1*** 
 
 ### 1.3 Robot Frameworkin asennus
 Seuraavaksi asensin Robot Frameworkin terminaalissa komennolla:
 ```bash
 pip install robotframework
 ```
-Tulos: **Successfully installed robotframework-7.2.2** 
+Tulos: ***Successfully installed robotframework-7.2.2*** 
 
 Robot Framework asennuksen tarkistin vielä suorittamalla komennon:
 ```bash
 robot --version
 ```
-Tulos: **Robot Framework 7.2.2** 
+Tulos: ***Robot Framework 7.2.2*** 
 
 ### 1.4 Browser Libraryn asennus ja alustaminen
 koska Browser library tarvitsee sekä Pythonin että Node.js toimiakseen. tarkistin Node.JS asennuksen komennolla:
 ```bash
 node -v
 ```
-Tulos: **v22.13.0** 
+Tulos: ***v22.13.0*** 
 
 Browser library -kirjaston ja selainajurit asensin seuraavaksi antamalla komennon:
 ```bash
 pip install robotframework-browser
 ```
-Tulos: **Successfully installed click-8.1.8 colorama-0.4.6 grpcio-1.70.0 grpcio-tools-1.70.0 natsort-8.4.0 overrides-7.7.0 protobuf-5.29.3 robotframework-assertion-engine-3.0.3 robotframework-browser-19.4.0 robotframework-pythonlibcore-4.4.1 seedir-0.5.0 setuptools-76.0.0 wrapt-1.17.2** 
+Tulos: ***Successfully installed click-8.1.8 colorama-0.4.6 grpcio-1.70.0 grpcio-tools-1.70.0 natsort-8.4.0 overrides-7.7.0 protobuf-5.29.3 robotframework-assertion-engine-3.0.3 robotframework-browser-19.4.0 robotframework-pythonlibcore-4.4.1 seedir-0.5.0 setuptools-76.0.0 wrapt-1.17.2*** 
 
 Kirjaston alustin komennolla:
 ```bash
@@ -77,11 +77,11 @@ pip install robotframework-requests
 pip install --upgrade robotframework-crypto
 pip install robotidy
 ```
-Tulos (robotframework-requests): **Successfully installed certifi-2025.1.31 charset-normalizer-3.4.1 idna-3.10 requests-2.32.3 robotframework-requests-0.9.7 urllib3-2.3.0**
+Tulos (robotframework-requests): ***Successfully installed certifi-2025.1.31 charset-normalizer-3.4.1 idna-3.10 requests-2.32.3 robotframework-requests-0.9.7 urllib3-2.3.0***
 
-Tulos (--upgrade robotframework-crypto): **Successfully installed PyNaCl-1.5.0 cffi-1.17.1 prompt_toolkit-3.0.50 pycparser-2.22 questionary-2.1.0 robotframework-crypto-0.4.2 wcwidth-0.2.13**
+Tulos (--upgrade robotframework-crypto): ***Successfully installed PyNaCl-1.5.0 cffi-1.17.1 prompt_toolkit-3.0.50 pycparser-2.22 questionary-2.1.0 robotframework-crypto-0.4.2 wcwidth-0.2.13***
 
-Tulos (robotidy): **Successfully installed MarkupSafe-3.0.2 jinja2-3.1.6 markdown-it-py-3.0.0 mdurl-0.1.2 pathspec-0.12.1 pygments-2.19.1 rich-13.9.4 rich_click-1.8.5 robotframework-tidy-4.16.0 tomli-2.2.1 typing_extensions-4.12.2**
+Tulos (robotidy): ***Successfully installed MarkupSafe-3.0.2 jinja2-3.1.6 markdown-it-py-3.0.0 mdurl-0.1.2 pathspec-0.12.1 pygments-2.19.1 rich-13.9.4 rich_click-1.8.5 robotframework-tidy-4.16.0 tomli-2.2.1 typing_extensions-4.12.2***
 
 ### 1.6 Asennuslistan tarkistus
 Tarkistin asennuslistan listaamalla kaikki nykyisessä Python-ympäristössä asennetut paketit ja niiden versiot. Tämän suoritin antamalla komennon:
