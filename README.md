@@ -179,11 +179,11 @@ Login to MyHealth
 **Click:** *Klikkaa kirjautumispainiketta kirjautuakseen sisään.*
 
 ---
-
 ### Testin tulos:
 Testi onnistui ja alla kuvakaappaus saamastani tuloksesta vs coden terminaalissa.
 
 ![alt text](image.png)
+
 ---
 
 ## Tehtävä 3
@@ -287,11 +287,11 @@ Test form submitted successfully
 **Test form submitted successfully:** *Varmistaa, että lomake on lähetetty onnistuneesti.*
 
 ---
-
 ### Testin tulos:
 Testissä onnistuin testaamaan kaikkien kenttien toimintaa, paitsi värivalitsimen, johon käytin todella paljon aikaa ja erilaisia lähestymistapoja. onnistuin saamaan värivalitsimen kentästä kiinni ja avaamaan sen mutta väriä en saanut kentään vaihdettua. Alla kuvakaappaus onnistuneista tuloksista vs coden terminaalissa.
 
 ![alt text](image-3.png)
+
 ---
 
 ## Tehtävä 4
@@ -369,4 +369,5 @@ Test Submit Medication
 Testissä onnistuin kirjautumaan sisälle MyHealth-sovellukseeni ja siirtymään lääkinnän seuraukseen ja täälä syöttämään lääkkeen ja muut tarvittavat muuttujat sekä lisäämään nämä. Alla kuvakaappaus saamistani tuloksista vs coden terminaalissa.
 
 ![alt text](image-5.png)
+
 ---
