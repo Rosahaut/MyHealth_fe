@@ -134,15 +134,15 @@ Tässä tehtävässä tuli sovltaa opettajan antamaa esimerkkiä ja tehdä kirja
 ### Testikoodi:
 Alla on tekemäni esimerkki kirjautumistestistä Robot Frameworkin ja Browser-kirjaston avulla:
 
-#### **Muuttujat (löytyvät ```Keywords.robot``` tiedostosta)**
+#### **Muuttujat**
 ```robot
 *** Variables ***
-${Username}     Kattimau
-${Password}     Salainensana!
+${Username}     Tähän käyttäjänimi
+${Password}     Tähän salasana
 ```
-**Tässä määritelen testissä käytettävät muuttujat:** *käyttäjätunnus ja salasana.*
+**Loin tiedoston ```Keywords.robot``` jossa määrittelen testissä käytettävät muuttujat (kansio ei ole näkyvissä githubissa salassapidettävien tietojen vuoksi):** *käyttäjätunnus ja salasana.*
 
-#### **Asetukset ja Testitapaus (löytyvät ```task_2.robot``` tiedostosta)**
+#### **Asetukset ja Testitapaus - testi ```task_2.robot``` tiedostossa**
 ```robot
 *** Settings ***
 Library    Browser    auto_closing_level=KEEP
@@ -192,7 +192,7 @@ Tehtävänä oli tukia lisää Browser Libraryn käyttöä. Minun täytyi tehdä
 
 Linkki annettuun esimerkkisivustoon: **[Web form](https://www.selenium.dev/selenium/web/web-form.html)**
 
-### Testikoodi (löytyy ```task_3.robot``` tiedostosta):
+### Testikoodi - testi ```task_3.robot``` tiedostossa:
 
 ```robot
 *** Settings ***
@@ -298,7 +298,7 @@ Testissä onnistuin testaamaan kaikkien kenttien toimintaa, paitsi värivalitsim
 
 Tehtävänä oli tehdä testi, joka tekee uuden merkinnän omalle sovellukselleni. käytin testissä Lääkitysseurantaan tarkoitettua kentää. testissä kirjaudun ensin käyttäjällä sisälle ja siirryn lääkitystietojen lisäykseen MyHealth-sovelluksessa, tämän jälkeen syötän tiedot lääkitysseurantaan ja tallennan nämä.
 
-### Testikoodi (löytyy ```task_4.robot``` tiedostosta):
+### Testikoodi - testi ```task_4.robot``` tiedostossa:
 
 ```robot
 *** Settings ***

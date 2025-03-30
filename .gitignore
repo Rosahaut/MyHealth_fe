@@ -25,4 +25,5 @@ dist-ssr
 
 # Ohjelmistotestaus
 .venv
-browser
+browser¨
+Keywords.robot
