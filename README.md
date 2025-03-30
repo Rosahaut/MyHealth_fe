@@ -124,4 +124,249 @@ Robot Framework: 7.2.2
 Browser: 19.4.0
 requests: 2.32.3
 CryptoLibrary: 0.4.2
-``` 
+```
+--- 
+
+## Tehtävä 2
+
+Tässä tehtävässä tuli sovltaa opettajan antamaa esimerkkiä ja tehdä kirjautumistesti omalle terveyspäiväkirja-sovellukselle.
+
+### Testikoodi:
+Alla on tekemäni esimerkki kirjautumistestistä Robot Frameworkin ja Browser-kirjaston avulla:
+
+#### **Muuttujat (löytyvät ```Keywords.robot``` tiedostosta)**
+```robot
+*** Variables ***
+${Username}     Kattimau
+${Password}     Salainensana!
+```
+**Tässä määritelen testissä käytettävät muuttujat:** *käyttäjätunnus ja salasana.*
+
+#### **Asetukset ja Testitapaus (löytyvät ```task_2.robot``` tiedostosta)**
+```robot
+*** Settings ***
+Library    Browser    auto_closing_level=KEEP
+Resource   Keywords.robot  
+
+*** Test Cases ***
+Login to MyHealth
+    New Browser    chromium    headless=No
+    New Page    http://localhost:5173/  
+
+    # Klikkaa login-modal auki
+    Click    id=openLoginModal
+    Wait For Elements State    id=loginModal    visible
+
+    # Kirjoita käyttäjätunnus ja salasana
+    Type Text    css=#loginModal input[name="username"]    ${Username}    delay=0.1 s  
+    Type Secret  css=#loginModal input[name="password"]    ${Password}    delay=0.1 s  
+
+    # Klikkaa kirjautumispainiketta
+    Click    css=#loginModal button.loginuser  
+```
+### Testin kuvaus:
+
+**New Browser:** *Avaa uuden selaimen testin suoritusta varten.*
+
+**New Page:** *Navigoi sovelluksen etusivulle.*
+
+**Click:** *Klikkaa openLoginModal-elementtiä, joka avaa kirjautumisikkunan.*
+
+**Wait For Elements State:** *Odottaa, että kirjautumisikkuna tulee näkyviin ennen seuraavien toimien suorittamista.*
+
+**Type Text:** *Syöttää käyttäjätunnuksen ja salasanan.*
+
+**Click:** *Klikkaa kirjautumispainiketta kirjautuakseen sisään.*
+
+---
+
+### Testin tulos:
+Testi onnistui ja alla kuvakaappaus saamastani tuloksesta vs coden terminaalissa.
+
+![alt text](image.png)
+---
+
+## Tehtävä 3
+
+Tehtävänä oli tukia lisää Browser Libraryn käyttöä. Minun täytyi tehdä testi, joka testaa opettajan antamaa Web form -esimerkkisivun kenttien toimintaa (Dropdown (select), Dropdown (datalist), File input, Checkboxit, Radio buttonit, jne).
+
+Linkki annettuun esimerkkisivustoon: **[Web form](https://www.selenium.dev/selenium/web/web-form.html)**
+
+### Testikoodi (löytyy ```task_3.robot``` tiedostosta):
+
+```robot
+*** Settings ***
+Library     Browser    auto_closing_level=KEEP
+Test Setup    New Browser    chromium    headless=No
+
+*** Test Cases ***
+Test Web Form Elements
+    New Page    https://www.selenium.dev/selenium/web/web-form.html
+
+    # Varmista, että sivun otsikko on oikea
+    ${title}=    Get Title
+    Should Be Equal As Strings    ${title}    Web form
+
+Test text
+    Type Text    css=input[name="my-text"]    TestUser    delay=0.1 s 
+
+Test password
+    Type Text    css=input[name="my-password"]    salasana123    delay=0.1 s
+
+Test textarea
+    Type Text    css=textarea[name="my-textarea"]    This is a test message.    delay=0.1 s 
+
+Test Readonly input
+    Click    [name="my-readonly"]
+
+Test Dropdownista (select)
+    Select Options By    css=select[name="my-select"]    value    2    delay=0.1 s 
+
+Test Dropdown (datalist) -kenttä
+    Type Text    css=input[name="my-datalist"]    San Francisco    delay=0.1 s 
+
+Test File input
+    Upload File By Selector    input[type="file"]    ${CURDIR}/testfile.txt
+
+Test Checkbox
+    Check Checkbox    id=my-check-1
+    Check Checkbox    id=my-check-2
+    Get Checkbox State    id=my-check-1    ==    checked
+    Get Checkbox State    id=my-check-2    ==    checked
+    Uncheck Checkbox    id=my-check-2
+    Get Checkbox State    id=my-check-2    ==    unchecked    delay=0.1 s 
+
+Test Radio button
+    Click    id=my-radio-2
+    Get Element States    id=my-radio-2    contains    checked
+    Click    id=my-radio-1
+    Get Element States    id=my-radio-1    contains    checked
+    Get Element States    id=my-radio-2    not contains    checked    delay=0.1 s
+
+Test Range 
+    Drag And Drop Relative to    [type="range"]    -100    0    steps=333 
+
+Test Date
+    Type Text    css=input[name="my-date"]    2025-03-24    delay=0.1 s
+
+Test Submit
+    Click    css=button 
+
+Test form submitted successfully
+    ${message}=    Get Text    css=#message
+    Should Be Equal As Strings    ${message}    Received!
+```
+### Testin kuvaus:
+
+**Test Web Form Elements:** *Testi avaa Web Form -esimerkkisivun ja tarkistaa, että sivun otsikko on oikein.*
+
+**Test text:** *Täyttää tekstikentän, jossa on tavallinen tekstisisältö.*
+
+**Test password:** *Syöttää salasanan kenttään.*
+
+**Test textarea:** *Täyttää monirivisen tekstikentän.*
+
+**Test Readonly input:** *Kokeilee lukittua kenttää.*
+
+**Test Dropdownista (select):** *Valitsee vaihtoehdon pudotusvalikosta (select).*
+
+**Test Dropdown (datalist) -kenttä:** *Syöttää arvon datalist-kenttään.*
+
+**Test File input:** *Lataa tiedoston tiedostosyöttökenttään.*
+
+**Test Checkbox:** *Valitsee ja poistaa valinnan valintaruutuista.*
+
+**Test Radio button:** *Klikkaa radiopainikkeita ja tarkistaa niiden tilan.*
+
+**Test Range:** *Siirtää liukusäädintä ja tarkistaa sen tilan.*
+
+**Test Date:** *Syöttää päivämäärän kenttään.*
+
+**Test Submit:** *Lähettää lomakkeen.*
+
+**Test form submitted successfully:** *Varmistaa, että lomake on lähetetty onnistuneesti.*
+
+---
+
+### Testin tulos:
+Testissä onnistuin testaamaan kaikkien kenttien toimintaa, paitsi värivalitsimen, johon käytin todella paljon aikaa ja erilaisia lähestymistapoja. onnistuin saamaan värivalitsimen kentästä kiinni ja avaamaan sen mutta väriä en saanut kentään vaihdettua. Alla kuvakaappaus onnistuneista tuloksista vs coden terminaalissa.
+
+![alt text](image-3.png)
+---
+
+## Tehtävä 4
+
+Tehtävänä oli tehdä testi, joka tekee uuden merkinnän omalle sovellukselleni. käytin testissä Lääkitysseurantaan tarkoitettua kentää. testissä kirjaudun ensin käyttäjällä sisälle ja siirryn lääkitystietojen lisäykseen MyHealth-sovelluksessa, tämän jälkeen syötän tiedot lääkitysseurantaan ja tallennan nämä.
+
+### Testikoodi (löytyy ```task_4.robot``` tiedostosta):
+
+```robot
+*** Settings ***
+Library    Browser    auto_closing_level=KEEP 
+Resource   Keywords.robot
+
+*** Test Cases ***
+
+Login to MyHealth
+    
+    New Browser    chromium    headless=No
+    New Page    http://localhost:5173/  
+
+    # Klikkaa login-modal auki
+    Click    id=openLoginModal
+    Wait For Elements State    id=loginModal    visible
+
+    # Kirjoita käyttäjätunnus ja salasana
+    Type Text    css=#loginModal input[name="username"]    ${Username}    delay=0.1 s  
+    Type Secret  css=#loginModal input[name="password"]    $Password      delay=0.1 s  
+
+    # Klikkaa kirjautumispainiketta
+    Click    css=#loginModal button.loginuser 
+
+Go to Medication form
+    Go To    http://localhost:5173/medication.html
+
+Test Medication Date
+    Type Text    css=input[id="date"]    28-03-2025    delay=0.1s
+
+Test Medication Name
+    Type Text    css=input[id="name"]    Kestox    delay=0.1s
+
+Test Dosage
+    Type Text    css=input[id="dosage"]    10mg    delay=0.1s
+
+Test Taken At
+    Type Text    css=input[id="taken_at"]    08:00    delay=0.1s
+
+Test Notes
+    Type Text    css=input[id="notes"]    For an allergic attack    delay=0.1s
+
+Test Submit Medication
+    Click    //button[text()='Add Medication']
+    Sleep    2s  # Odotetaan tallennuksen varmistamiseksi
+```
+### Testin kuvaus:
+
+**Login to MyHealth:** *Kirjautuu sisään MyHealth-sovellukseen käyttäen Keywords.robot tiedostossa määritettyjä tunnuksia.*
+
+**Go to Medication form:** *Siirtyy lääkitystietojen syöttösivulle.*
+
+**Test Medication Date:** *Täyttää lääkkeen määrämispäivämäärän kenttään.*
+
+**Test Medication Name:** *Syöttää lääkkeen nimen.*
+
+**Test Dosage:** *Syöttää lääkkeen annostuksen.*
+
+**Test Taken At:** *Syöttää ajan, jolloin lääke otettiin.*
+
+**Test Notes:** *Täyttää kentän lääkkeen käyttöön liittyvillä muistiinpanoilla.*
+
+**Test Submit Medication:** *Lisää lääkitystiedot lomakkeeseen.*
+
+---
+
+### Testin tulos:
+Testissä onnistuin kirjautumaan sisälle MyHealth-sovellukseeni ja siirtymään lääkinnän seuraukseen ja täälä syöttämään lääkkeen ja muut tarvittavat muuttujat sekä lisäämään nämä. Alla kuvakaappaus saamistani tuloksista vs coden terminaalissa.
+
+![alt text](image-5.png)
+---

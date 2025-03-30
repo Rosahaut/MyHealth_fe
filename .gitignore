@@ -25,3 +25,4 @@ dist-ssr
 
 # Ohjelmistotestaus
 .venv
+browser
