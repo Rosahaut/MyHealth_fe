@@ -179,6 +179,7 @@ Login to MyHealth
 **Click:** *Klikkaa kirjautumispainiketta kirjautuakseen sisään.*
 
 ---
+
 ### Testin tulos:
 Testi onnistui ja alla kuvakaappaus saamastani tuloksesta vs coden terminaalissa.
 
@@ -287,6 +288,7 @@ Test form submitted successfully
 **Test form submitted successfully:** *Varmistaa, että lomake on lähetetty onnistuneesti.*
 
 ---
+
 ### Testin tulos:
 Testissä onnistuin testaamaan kaikkien kenttien toimintaa, paitsi värivalitsimen, johon käytin todella paljon aikaa ja erilaisia lähestymistapoja. onnistuin saamaan värivalitsimen kentästä kiinni ja avaamaan sen mutta väriä en saanut kentään vaihdettua. Alla kuvakaappaus onnistuneista tuloksista vs coden terminaalissa.
 
