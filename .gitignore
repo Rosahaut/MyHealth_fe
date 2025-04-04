@@ -27,3 +27,5 @@ dist-ssr
 .venv
 browser¨
 Keywords.robot
+
+.env

@@ -373,3 +373,152 @@ Testissä onnistuin kirjautumaan sisälle MyHealth-sovellukseeni ja siirtymään
 ![alt text](image-5.png)
 
 ---
+
+## Tehtävä 5
+
+Tehtävänä oli tehdä kirjautumistesti omalle Myhealth-sovellukselle, joka käyttää ’.env’-tiedostoon piilotettuja käyttäjätunnusta ja salasanaa.
+
+### Luodaan tiedosto ```env.``` johon lisätään käyttäjänimi sekä salasana. Tiedosto ```gitignore.``` tiedostoon, jotta se ei tallennu GitHubiin.
+
+```robot
+*** Example  of env. file ***
+USERNAME=Oma käyttäjänimi tähän 
+PASSWORD=Oma salasana tähän 
+```
+
+### Määritellään muuttujat ```load_env.py``` tiedostossa:
+
+```robot
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+USERNAME = os.getenv('USERNAME')
+PASSWORD = os.getenv('PASSWORD')
+```
+
+### Testikoodi - testi ```task_5.robot``` tiedostossa:
+
+```robot
+*** Settings ***
+Library    Browser    auto_closing_level=KEEP
+Library           Collections
+Library           OperatingSystem
+Library           DotenvLibrary  # Lataa ympäristömuuttujat
+Variables         load_env.py
+
+*** Test Cases ***
+Login to MyHealth using env.
+
+    New Browser    chromium    headless=No
+    New Page    http://localhost:5173/  
+
+    ${USERNAME}=    Get Environment Variable    USERNAME
+    ${PASSWORD}=    Get Environment Variable    PASSWORD
+
+    [Documentation]
+    Log    USERNAME: ${USERNAME}
+    Log    PASSWORD:
+
+    # Klikkaa login-modal auki
+    Click    id=openLoginModal
+    Wait For Elements State    id=loginModal    visible
+
+    # Kirjoita käyttäjätunnus ja salasana
+    Type Text    css=#loginModal input[name="username"]    ${USERNAME}    delay=0.1 s  
+    Type Secret  css=#loginModal input[name="password"]    $PASSWORD    delay=0.1 s  
+
+    # Klikkaa kirjautumispainiketta
+    Click    css=#loginModal button.loginuser
+```
+### Testin kuvaus:
+
+**New Browser:** *Avaa uuden selaimen testin suoritusta varten.*
+
+**New Page:** *Navigoi sovelluksen etusivulle.*
+
+**Get Environment Variable:** *Hakee käyttäjätunnuksen ja salasanan ympäristömuuttujista.*
+
+**Log:** *Kirjaa käyttäjätunnuksen ja piilottaa salasanan testilokissa.*
+
+**Click:** *Klikkaa openLoginModal-elementtiä, joka avaa kirjautumisikkunan.*
+
+**Wait For Elements State:** *Odottaa, että kirjautumisikkuna tulee näkyviin ennen seuraavien toimien suorittamista.*
+
+**Type Text:** *Syöttää käyttäjätunnuksen kirjautumiskenttään.*
+
+**Type Secret:** *Syöttää salasanan kirjautumiskenttään turvallisesti ilman, että se näkyy testilokissa.*
+
+**Click:** *Klikkaa kirjautumispainiketta kirjautuakseen sisään.*
+
+---
+
+### Testin tulos:
+Testi onnistui ja alla kuvakaappaus saamastani tuloksesta vs coden terminaalissa.
+
+![alt text](image-6.png)
+
+---
+
+## Tehtävä 6
+
+Tehtävänä oli tehdä kirjautumistesti omalle Myhealth-sovellukselle, missä sekä salasana että käyttäjätunnus on kryptattu käyttäen CryptoLibrarya.
+
+### Testikoodi - testi ```task_6.robot``` tiedostossa:
+
+```robot
+*** Settings ***
+Library     Browser     	    auto_closing_level=SUITE
+Library     CryptoLibrary     variable_decryption=True   #Kryptatut muuttujat puretaan automaattisesti
+
+*** Variables ***
+${Username}    crypt:Aaxk2uyVexr+5cDWn7qlr1hI1bnza2YVvBvdB9/AUhS19bNghpKEZ/4QqbLRc2dpEq3X8ZPY7yg=
+${Password}    crypt:Wa07dhSDMUozeRABOSZHi2Nf4Geeds/HVFPQYgsG+DmR6Un6juu8pK6rx90m/wL25O/5/0PeQNr9SzuDEA== 
+
+*** Test Cases ***
+Login to MyHealth
+    New Browser     chromium    headless=No
+    New Page    http://localhost:5173/
+
+    # Klikkaa login-modal auki
+    Click    id=openLoginModal
+    Wait For Elements State    id=loginModal    visible
+
+    # Kirjoita käyttäjätunnus ja salasana
+    Type Text    css=#loginModal input[name="username"]    ${Username}    delay=0.1 s  
+    Type Secret  css=#loginModal input[name="password"]    $Password      delay=0.1 s  
+
+    # Klikkaa kirjautumispainiketta
+    Click    css=#loginModal button.loginuser
+```
+### Testin kuvaus:
+
+**Variables:**
+
+*Käyttäjätunnus ja salasana on tallennettu kryptattuina ja ne puretaan automaattisesti ennen käyttöä.*
+
+**Testin kulku:**
+
+**New Browser:** *Avaa uuden Chromium-selaimen ilman headless-tilaa.*
+
+**New Page:** *Navigoi sovelluksen kirjautumissivulle (http://localhost:5173/).*
+
+**Click:** *Klikkaa login-modal-elementtiä (id=openLoginModal), joka avaa kirjautumisikkunan.*
+
+**Wait For Elements State:** *Varmistaa, että kirjautumisikkuna (id=loginModal) on näkyvissä ennen seuraavien toimien suorittamista.*
+
+**Type Text:** *Syöttää puretun käyttäjätunnuksen kirjautumiskenttään.*
+
+**Type Secret:** *Syöttää puretun salasanan turvallisesti ilman, että se näkyy testilokissa.*
+
+**Click:** *Klikkaa kirjautumispainiketta kirjautuakseen sovellukseen.*
+
+---
+
+### Testin tulos:
+Testi onnistui ja alla kuvakaappaus saamastani tuloksesta vs coden terminaalissa.
+
+![alt text](image-7.png)
+
+---
