@@ -538,11 +538,11 @@ Tehtävänä oli ohjata testien loki- ja raporttitiedostot erilliseen outputs/-k
 Tehtävänä oli luoda omalle GitHub-kansiollesi github.io-sivusto jonka kautta testien loki- ja
 raporttitiedostot (HTML) ovat luettavissa.
 
-**Aluksi tein projektin juureen kansion nimeltä `docs/`. kansion loin terminaalissa komennolla:
+**1. Tein projektin juureen kansion nimeltä `docs/`. kansion loin terminaalissa komennolla:**
 ```bash
 mkdir docs
 ```
-Seuraavaksi kopioin outputs kansioon ajetut *log.html* ja *reports.html* tulokset `docs/` kansioon antamalla terminaalissa komennot: 
+**2. Seuraavaksi kopioin outputs kansioon ajetut *log.html* ja *reports.html* tulokset `docs/` kansioon antamalla terminaalissa komennot:** 
 ```bash
 cp outputs/log.html docs/
 cp outputs/report.html docs/
@@ -554,16 +554,18 @@ cp outputs/log.html docs/
 cp outputs/report.html docs/
 ```
 
-Vaikka GitHub Pages osaa näyttää `docs/`-kansion sisällön suoraan, tein kuitenkin kyseiseen kansioon *index.html* tiedoston jotta tulosten käsittely ja lukeminen olisi selkeämpää.
+###### Vaikka GitHub Pages osaa näyttää docs/-kansion sisällön suoraan, tein kyseiseen kansioon *index.html* tiedoston jotta tulosten käsittely ja lukeminen olisi selkeämpää.
 
-Seuraavaksi menin GitHub-repositorioni sivulle selaimessa. Repositoriossa suoritin seuraavat vaiheet:
+**3. Seuraavaksi menin GitHub-repositorioni sivulle selaimessa. Repositoriossa suoritin seuraavat vaiheet:**
 
-1. Valitsin Settings → Pages
+1. Valitsin `Settings` → `Pages`
 
 2. Valitsin Kohdan "Source":
-    - Tästä valitsin Branch: main
-    - Jonka jälkeen valitsin /docs kansion
+    - Seuraavaksi valitsin `Branch`: `main`
+    - Jonka jälkeen valitsin `/docs` kansion
 
-3. Lopuksi painoin Tallenna painiketta.
+3. Lopuksi painoin `Tallenna` painiketta.
 
-Hetken kuluttua suoritettuani toiminnot Githubissa sain osoitteen [🌐 Testisivun etusivu (index.html)](https://rosahaut.github.io/MyHealth_fe/) josta testien tulokset ovat nähtävillä selaimessa.
+**4. Hetken kuluttua suoritettuani toiminnot Githubissa sain osoitteen `🔗https://rosahaut.github.io/MyHealth_fe/` josta testien tulokset ovat nähtävillä selaimessa.**
+
+---
