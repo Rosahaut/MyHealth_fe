@@ -522,3 +522,48 @@ Testi onnistui ja alla kuvakaappaus saamastani tuloksesta vs coden terminaalissa
 ![alt text](image-7.png)
 
 ---
+
+## Tehtävä 7
+
+Tehtävänä oli ohjata testien loki- ja raporttitiedostot erilliseen outputs/-kansioon. 
+
+**Aluksi loin erillisen *[outputs/](outputs/)* kansion projektiin, johon ohjasin testien loki- ja raporttitiedostot.**
+
+**Ohjaus tapahtui antamalla terminaalissa komento: `robot --outputdir outputs tests/haluttu testi.robot` testiä suoritettaessa.**
+
+---
+
+## Tehtävä 8
+
+Tehtävänä oli luoda omalle GitHub-kansiollesi github.io-sivusto jonka kautta testien loki- ja
+raporttitiedostot (HTML) ovat luettavissa.
+
+**Aluksi tein projektin juureen kansion nimeltä `docs/`. kansion loin terminaalissa komennolla:
+```bash
+mkdir docs
+```
+Seuraavaksi kopioin outputs kansioon ajetut *log.html* ja *reports.html* tulokset `docs/` kansioon antamalla terminaalissa komennot: 
+```bash
+cp outputs/log.html docs/
+cp outputs/report.html docs/
+```
+Kopioinnin pystyi myös automatisoida. tämä tapahtuu lisäämällä terminaalissa suoritettavan testiajon loppuun rivin, joka kopioi *logit* `docs/`-kansioon automaattisesti:
+```bash
+robot --outputdir outputs tests/
+cp outputs/log.html docs/
+cp outputs/report.html docs/
+```
+
+Vaikka GitHub Pages osaa näyttää `docs/`-kansion sisällön suoraan, tein kuitenkin kyseiseen kansioon *index.html* tiedoston jotta tulosten käsittely ja lukeminen olisi selkeämpää.
+
+Seuraavaksi menin GitHub-repositorioni sivulle selaimessa. Repositoriossa suoritin seuraavat vaiheet:
+
+1. Valitsin Settings → Pages
+
+2. Valitsin Kohdan "Source":
+    - Tästä valitsin Branch: main
+    - Jonka jälkeen valitsin /docs kansion
+
+3. Lopuksi painoin Tallenna painiketta.
+
+Hetken kuluttua suoritettuani toiminnot Githubissa sain osoitteen [🌐 Testisivun etusivu (index.html)](https://rosahaut.github.io/MyHealth_fe/) josta testien tulokset ovat nähtävillä selaimessa.

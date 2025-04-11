@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.1 on win32)" generated="2025-04-09T14:17:19.019209" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.13.1 on win32)" generated="2025-04-11T21:18:07.365873" rpa="false" schemaversion="5">
 <suite id="s1" name="Task 2 &amp; Task 3 &amp; Task 4 &amp; Task 5 &amp; Task 6">
 <suite id="s1-s1" name="Task 2" source="C:\Users\Rosa\OneDrive\Tiedostot\Hyte\Diary_app\MyHealth-fe\tests\task_2.robot">
 <test id="s1-s1-t1" name="Login to MyHealth" line="6">
 <kw name="New Browser" owner="Browser">
-<msg time="2025-04-09T14:17:19.460839" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\Rosa\\OneDrive\\Tiedostot\\Hyte\\Diary_app\\MyHealth-fe\\outputs\\browser\\traces\\temp\\a6842ade-ca80-4c80-94f2-6cb0b4192a6d"}</msg>
-<msg time="2025-04-09T14:17:19.532275" level="INFO">Starting Browser process C:\Users\Rosa\OneDrive\Tiedostot\Hyte\Diary_app\MyHealth-fe\.venv\Lib\site-packages\Browser\wrapper\index.js using port 59955</msg>
-<msg time="2025-04-09T14:17:19.532415" level="INFO">Node startup parameters: ['node', 'C:\\Users\\Rosa\\OneDrive\\Tiedostot\\Hyte\\Diary_app\\MyHealth-fe\\.venv\\Lib\\site-packages\\Browser\\wrapper\\index.js', '59955']</msg>
-<msg time="2025-04-09T14:17:21.446934" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\Rosa\\OneDrive\\Tiedostot\\Hyte\\Diary_app\\MyHealth-fe\\outputs\\browser\\traces\\temp\\a6842ade-ca80-4c80-94f2-6cb0b4192a6d"}</msg>
+<msg time="2025-04-11T21:18:08.124280" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\Rosa\\OneDrive\\Tiedostot\\Hyte\\Diary_app\\MyHealth-fe\\outputs\\browser\\traces\\temp\\3c7eacd3-4b17-4e73-9ea3-1987741bd047"}</msg>
+<msg time="2025-04-11T21:18:08.155116" level="INFO">Starting Browser process C:\Users\Rosa\OneDrive\Tiedostot\Hyte\Diary_app\MyHealth-fe\.venv\Lib\site-packages\Browser\wrapper\index.js using port 50437</msg>
+<msg time="2025-04-11T21:18:08.156182" level="INFO">Node startup parameters: ['node', 'C:\\Users\\Rosa\\OneDrive\\Tiedostot\\Hyte\\Diary_app\\MyHealth-fe\\.venv\\Lib\\site-packages\\Browser\\wrapper\\index.js', '50437']</msg>
+<msg time="2025-04-11T21:18:16.518149" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\Rosa\\OneDrive\\Tiedostot\\Hyte\\Diary_app\\MyHealth-fe\\outputs\\browser\\traces\\temp\\3c7eacd3-4b17-4e73-9ea3-1987741bd047"}</msg>
 <arg>chromium</arg>
 <arg>headless=No</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-04-09T14:17:19.456309" elapsed="1.990941"/>
+<status status="PASS" start="2025-04-11T21:18:08.119274" elapsed="8.399519"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2025-04-09T14:17:22.529477" level="INFO">Successfully initialized new page object and opened url: http://localhost:5173/</msg>
-<msg time="2025-04-09T14:17:22.529694" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<msg time="2025-04-11T21:18:17.115787" level="INFO">Successfully initialized new page object and opened url: http://localhost:5173/</msg>
+<msg time="2025-04-11T21:18:17.115918" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
 <arg>http://localhost:5173/</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2025-04-09T14:17:21.457374" elapsed="1.072863"/>
+<status status="PASS" start="2025-04-11T21:18:16.533656" elapsed="0.582808"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2025-04-09T14:17:22.532101" level="INFO">Clicks the element 'id=openLoginModal'.</msg>
+<msg time="2025-04-11T21:18:17.117891" level="INFO">Clicks the element 'id=openLoginModal'.</msg>
 <arg>id=openLoginModal</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:22.531001" elapsed="0.299443"/>
+<status status="PASS" start="2025-04-11T21:18:17.117194" elapsed="0.230291"/>
 </kw>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2025-04-09T14:17:22.845209" level="INFO">Waited for Element with selector id=loginModal at state visible</msg>
+<msg time="2025-04-11T21:18:17.358225" level="INFO">Waited for Element with selector id=loginModal at state visible</msg>
 <arg>id=loginModal</arg>
 <arg>visible</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2025-04-09T14:17:22.830934" elapsed="0.014561"/>
+<status status="PASS" start="2025-04-11T21:18:17.348033" elapsed="0.010500"/>
 </kw>
 <kw name="Type Text" owner="Browser">
-<msg time="2025-04-09T14:17:22.852896" level="INFO">Types the text 'Kattimau' in the given field.</msg>
+<msg time="2025-04-11T21:18:17.366303" level="INFO">Types the text 'Kattimau' in the given field.</msg>
 <arg>css=#loginModal input[name="username"]</arg>
 <arg>${Username}</arg>
 <arg>delay=0.1 s</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:22.846082" elapsed="0.993098"/>
+<status status="PASS" start="2025-04-11T21:18:17.359067" elapsed="0.950023"/>
 </kw>
 <kw name="Type Secret" owner="Browser">
 <arg>css=#loginModal input[name="password"]</arg>
@@ -59,173 +59,173 @@
 <tag>Setter</tag>
 <doc>Types the given secret from ``variable_name`` into the text field
 found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:23.839957" elapsed="1.495487"/>
+<status status="PASS" start="2025-04-11T21:18:18.309737" elapsed="1.517456"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2025-04-09T14:17:25.336784" level="INFO">Clicks the element 'css=#loginModal button.loginuser'.</msg>
+<msg time="2025-04-11T21:18:19.828405" level="INFO">Clicks the element 'css=#loginModal button.loginuser'.</msg>
 <arg>css=#loginModal button.loginuser</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:25.336001" elapsed="0.042035"/>
+<status status="PASS" start="2025-04-11T21:18:19.827727" elapsed="0.026530"/>
 </kw>
-<msg time="2025-04-09T14:17:25.381931" level="INFO">Set timeout to: 10000</msg>
-<status status="PASS" start="2025-04-09T14:17:19.455252" elapsed="5.923185"/>
+<msg time="2025-04-11T21:18:19.858248" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-04-11T21:18:08.118321" elapsed="11.736319"/>
 </test>
-<status status="PASS" start="2025-04-09T14:17:19.080414" elapsed="6.302436"/>
+<status status="PASS" start="2025-04-11T21:18:07.424613" elapsed="12.434559"/>
 </suite>
 <suite id="s1-s2" name="Task 3" source="C:\Users\Rosa\OneDrive\Tiedostot\Hyte\Diary_app\MyHealth-fe\tests\task_3.robot">
 <test id="s1-s2-t1" name="Test Web Form Elements" line="6">
 <kw name="New Browser" owner="Browser" type="SETUP">
-<msg time="2025-04-09T14:17:25.391936" level="INFO">Switching browser to browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
-<msg time="2025-04-09T14:17:25.397001" level="INFO">Successfully changed active browser: browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
-<msg time="2025-04-09T14:17:25.397129" level="INFO">Reusing existing browser with id: browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
+<msg time="2025-04-11T21:18:19.866896" level="INFO">Switching browser to browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
+<msg time="2025-04-11T21:18:19.872376" level="INFO">Successfully changed active browser: browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
+<msg time="2025-04-11T21:18:19.872496" level="INFO">Reusing existing browser with id: browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
 <arg>chromium</arg>
 <arg>headless=No</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-04-09T14:17:25.391233" elapsed="0.005953"/>
+<status status="PASS" start="2025-04-11T21:18:19.866356" elapsed="0.006195"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2025-04-09T14:17:25.895455" level="INFO">Successfully initialized new page object and opened url: https://www.selenium.dev/selenium/web/web-form.html</msg>
+<msg time="2025-04-11T21:18:20.306427" level="INFO">Successfully initialized new page object and opened url: https://www.selenium.dev/selenium/web/web-form.html</msg>
 <arg>https://www.selenium.dev/selenium/web/web-form.html</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2025-04-09T14:17:25.397569" elapsed="0.498234"/>
+<status status="PASS" start="2025-04-11T21:18:19.873093" elapsed="0.433566"/>
 </kw>
 <kw name="Get Title" owner="Browser">
-<msg time="2025-04-09T14:17:25.909957" level="INFO">Title: 'Web form'</msg>
-<msg time="2025-04-09T14:17:25.910236" level="INFO">${title} = Web form</msg>
+<msg time="2025-04-11T21:18:20.316344" level="INFO">Title: 'Web form'</msg>
+<msg time="2025-04-11T21:18:20.316579" level="INFO">${title} = Web form</msg>
 <var>${title}</var>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2025-04-09T14:17:25.896416" elapsed="0.013879"/>
+<status status="PASS" start="2025-04-11T21:18:20.307087" elapsed="0.009538"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>${title}</arg>
 <arg>Web form</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-04-09T14:17:25.911092" elapsed="0.000945"/>
+<status status="PASS" start="2025-04-11T21:18:20.317128" elapsed="0.000322"/>
 </kw>
-<msg time="2025-04-09T14:17:25.915695" level="INFO">Set timeout to: 10000</msg>
-<status status="PASS" start="2025-04-09T14:17:25.390294" elapsed="0.522196"/>
+<msg time="2025-04-11T21:18:20.321688" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-04-11T21:18:19.865954" elapsed="0.451943"/>
 </test>
 <test id="s1-s2-t2" name="Test text" line="13">
 <kw name="New Browser" owner="Browser" type="SETUP">
-<msg time="2025-04-09T14:17:25.918301" level="INFO">Switching browser to browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
-<msg time="2025-04-09T14:17:25.922327" level="INFO">Successfully changed active browser: browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
-<msg time="2025-04-09T14:17:25.922783" level="INFO">Reusing existing browser with id: browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
+<msg time="2025-04-11T21:18:20.324450" level="INFO">Switching browser to browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
+<msg time="2025-04-11T21:18:20.329940" level="INFO">Successfully changed active browser: browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
+<msg time="2025-04-11T21:18:20.330225" level="INFO">Reusing existing browser with id: browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
 <arg>chromium</arg>
 <arg>headless=No</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-04-09T14:17:25.917272" elapsed="0.005693"/>
+<status status="PASS" start="2025-04-11T21:18:20.323521" elapsed="0.007022"/>
 </kw>
 <kw name="Type Text" owner="Browser">
-<msg time="2025-04-09T14:17:25.925844" level="INFO">Types the text 'TestUser' in the given field.</msg>
+<msg time="2025-04-11T21:18:20.332119" level="INFO">Types the text 'TestUser' in the given field.</msg>
 <arg>css=input[name="my-text"]</arg>
 <arg>TestUser</arg>
 <arg>delay=0.1 s</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:25.924935" elapsed="1.005705"/>
+<status status="PASS" start="2025-04-11T21:18:20.331320" elapsed="0.946028"/>
 </kw>
-<msg time="2025-04-09T14:17:26.934634" level="INFO">Set timeout to: 10000</msg>
-<status status="PASS" start="2025-04-09T14:17:25.916696" elapsed="1.014713"/>
+<msg time="2025-04-11T21:18:21.279938" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-04-11T21:18:20.322949" elapsed="0.954962"/>
 </test>
 <test id="s1-s2-t3" name="Test password" line="16">
 <kw name="New Browser" owner="Browser" type="SETUP">
-<msg time="2025-04-09T14:17:26.937348" level="INFO">Switching browser to browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
-<msg time="2025-04-09T14:17:26.942428" level="INFO">Successfully changed active browser: browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
-<msg time="2025-04-09T14:17:26.942684" level="INFO">Reusing existing browser with id: browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
+<msg time="2025-04-11T21:18:21.281520" level="INFO">Switching browser to browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
+<msg time="2025-04-11T21:18:21.283887" level="INFO">Successfully changed active browser: browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
+<msg time="2025-04-11T21:18:21.283998" level="INFO">Reusing existing browser with id: browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
 <arg>chromium</arg>
 <arg>headless=No</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-04-09T14:17:26.936411" elapsed="0.006404"/>
+<status status="PASS" start="2025-04-11T21:18:21.281020" elapsed="0.003058"/>
 </kw>
 <kw name="Type Text" owner="Browser">
-<msg time="2025-04-09T14:17:26.944549" level="INFO">Types the text 'salasana123' in the given field.</msg>
+<msg time="2025-04-11T21:18:21.285068" level="INFO">Types the text 'salasana123' in the given field.</msg>
 <arg>css=input[name="my-password"]</arg>
 <arg>salasana123</arg>
 <arg>delay=0.1 s</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:26.943425" elapsed="1.297914"/>
+<status status="PASS" start="2025-04-11T21:18:21.284442" elapsed="1.274716"/>
 </kw>
-<msg time="2025-04-09T14:17:28.244811" level="INFO">Set timeout to: 10000</msg>
-<status status="PASS" start="2025-04-09T14:17:26.935813" elapsed="1.306036"/>
+<msg time="2025-04-11T21:18:22.562937" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-04-11T21:18:21.280659" elapsed="1.279598"/>
 </test>
 <test id="s1-s2-t4" name="Test textarea" line="19">
 <kw name="New Browser" owner="Browser" type="SETUP">
-<msg time="2025-04-09T14:17:28.246516" level="INFO">Switching browser to browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
-<msg time="2025-04-09T14:17:28.249157" level="INFO">Successfully changed active browser: browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
-<msg time="2025-04-09T14:17:28.249320" level="INFO">Reusing existing browser with id: browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
+<msg time="2025-04-11T21:18:22.565365" level="INFO">Switching browser to browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
+<msg time="2025-04-11T21:18:22.567445" level="INFO">Successfully changed active browser: browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
+<msg time="2025-04-11T21:18:22.567554" level="INFO">Reusing existing browser with id: browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
 <arg>chromium</arg>
 <arg>headless=No</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-04-09T14:17:28.245850" elapsed="0.003561"/>
+<status status="PASS" start="2025-04-11T21:18:22.564860" elapsed="0.002752"/>
 </kw>
 <kw name="Type Text" owner="Browser">
-<msg time="2025-04-09T14:17:28.250421" level="INFO">Types the text 'This is a test message.' in the given field.</msg>
+<msg time="2025-04-11T21:18:22.568411" level="INFO">Types the text 'This is a test message.' in the given field.</msg>
 <arg>css=textarea[name="my-textarea"]</arg>
 <arg>This is a test message.</arg>
 <arg>delay=0.1 s</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:28.249754" elapsed="3.506231"/>
+<status status="PASS" start="2025-04-11T21:18:22.567940" elapsed="2.626851"/>
 </kw>
-<msg time="2025-04-09T14:17:31.759119" level="INFO">Set timeout to: 10000</msg>
-<status status="PASS" start="2025-04-09T14:17:28.245545" elapsed="3.510842"/>
+<msg time="2025-04-11T21:18:25.200486" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-04-11T21:18:22.564523" elapsed="2.631526"/>
 </test>
 <test id="s1-s2-t5" name="Test Readonly input" line="22">
 <kw name="New Browser" owner="Browser" type="SETUP">
-<msg time="2025-04-09T14:17:31.760915" level="INFO">Switching browser to browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
-<msg time="2025-04-09T14:17:31.764026" level="INFO">Successfully changed active browser: browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
-<msg time="2025-04-09T14:17:31.764131" level="INFO">Reusing existing browser with id: browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
+<msg time="2025-04-11T21:18:25.204851" level="INFO">Switching browser to browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
+<msg time="2025-04-11T21:18:25.209727" level="INFO">Successfully changed active browser: browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
+<msg time="2025-04-11T21:18:25.209906" level="INFO">Reusing existing browser with id: browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
 <arg>chromium</arg>
 <arg>headless=No</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-04-09T14:17:31.760114" elapsed="0.004076"/>
+<status status="PASS" start="2025-04-11T21:18:25.203763" elapsed="0.006242"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2025-04-09T14:17:31.765478" level="INFO">Clicks the element '[name="my-readonly"]'.</msg>
+<msg time="2025-04-11T21:18:25.211712" level="INFO">Clicks the element '[name="my-readonly"]'.</msg>
 <arg>[name="my-readonly"]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:31.764763" elapsed="0.057425"/>
+<status status="PASS" start="2025-04-11T21:18:25.210548" elapsed="0.024262"/>
 </kw>
-<msg time="2025-04-09T14:17:31.826387" level="INFO">Set timeout to: 10000</msg>
-<status status="PASS" start="2025-04-09T14:17:31.759756" elapsed="0.063366"/>
+<msg time="2025-04-11T21:18:25.236657" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-04-11T21:18:25.203080" elapsed="0.032039"/>
 </test>
 <test id="s1-s2-t6" name="Test Dropdownista (select)" line="25">
 <kw name="New Browser" owner="Browser" type="SETUP">
-<msg time="2025-04-09T14:17:31.830087" level="INFO">Switching browser to browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
-<msg time="2025-04-09T14:17:31.832609" level="INFO">Successfully changed active browser: browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
-<msg time="2025-04-09T14:17:31.832752" level="INFO">Reusing existing browser with id: browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
+<msg time="2025-04-11T21:18:25.237863" level="INFO">Switching browser to browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
+<msg time="2025-04-11T21:18:25.239706" level="INFO">Successfully changed active browser: browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
+<msg time="2025-04-11T21:18:25.239793" level="INFO">Reusing existing browser with id: browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
 <arg>chromium</arg>
 <arg>headless=No</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-04-09T14:17:31.828986" elapsed="0.003844"/>
+<status status="PASS" start="2025-04-11T21:18:25.237384" elapsed="0.002456"/>
 </kw>
 <kw name="Select Options By" owner="Browser">
-<msg time="2025-04-09T14:17:31.833827" level="INFO">Selects the option(s) 2, delay=0.1 s by attribute SelectAttribute.value from element css=select[name="my-select"].</msg>
+<msg time="2025-04-11T21:18:25.240775" level="INFO">Selects the option(s) 2, delay=0.1 s by attribute SelectAttribute.value from element css=select[name="my-select"].</msg>
 <arg>css=select[name="my-select"]</arg>
 <arg>value</arg>
 <arg>2</arg>
@@ -233,47 +233,47 @@ found by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Selects options from select element found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:31.833139" elapsed="0.058122"/>
+<status status="PASS" start="2025-04-11T21:18:25.240159" elapsed="0.027628"/>
 </kw>
-<msg time="2025-04-09T14:17:31.894606" level="INFO">Set timeout to: 10000</msg>
-<status status="PASS" start="2025-04-09T14:17:31.828375" elapsed="0.063320"/>
+<msg time="2025-04-11T21:18:25.270014" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-04-11T21:18:25.237102" elapsed="0.031100"/>
 </test>
 <test id="s1-s2-t7" name="Test Dropdown (datalist) -kenttä" line="28">
 <kw name="New Browser" owner="Browser" type="SETUP">
-<msg time="2025-04-09T14:17:31.921554" level="INFO">Switching browser to browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
-<msg time="2025-04-09T14:17:31.925849" level="INFO">Successfully changed active browser: browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
-<msg time="2025-04-09T14:17:31.926007" level="INFO">Reusing existing browser with id: browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
+<msg time="2025-04-11T21:18:25.284860" level="INFO">Switching browser to browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
+<msg time="2025-04-11T21:18:25.287025" level="INFO">Successfully changed active browser: browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
+<msg time="2025-04-11T21:18:25.287120" level="INFO">Reusing existing browser with id: browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
 <arg>chromium</arg>
 <arg>headless=No</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-04-09T14:17:31.920759" elapsed="0.005323"/>
+<status status="PASS" start="2025-04-11T21:18:25.284380" elapsed="0.002785"/>
 </kw>
 <kw name="Type Text" owner="Browser">
-<msg time="2025-04-09T14:17:31.927785" level="INFO">Types the text 'San Francisco' in the given field.</msg>
+<msg time="2025-04-11T21:18:25.287856" level="INFO">Types the text 'San Francisco' in the given field.</msg>
 <arg>css=input[name="my-datalist"]</arg>
 <arg>San Francisco</arg>
 <arg>delay=0.1 s</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:31.926598" elapsed="1.528052"/>
+<status status="PASS" start="2025-04-11T21:18:25.287431" elapsed="1.521074"/>
 </kw>
-<msg time="2025-04-09T14:17:33.457571" level="INFO">Set timeout to: 10000</msg>
-<status status="PASS" start="2025-04-09T14:17:31.911022" elapsed="1.544266"/>
+<msg time="2025-04-11T21:18:26.811294" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-04-11T21:18:25.274516" elapsed="1.534745"/>
 </test>
 <test id="s1-s2-t8" name="Test File input" line="31">
 <kw name="New Browser" owner="Browser" type="SETUP">
-<msg time="2025-04-09T14:17:33.459998" level="INFO">Switching browser to browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
-<msg time="2025-04-09T14:17:33.463599" level="INFO">Successfully changed active browser: browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
-<msg time="2025-04-09T14:17:33.463747" level="INFO">Reusing existing browser with id: browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
+<msg time="2025-04-11T21:18:26.812676" level="INFO">Switching browser to browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
+<msg time="2025-04-11T21:18:26.814879" level="INFO">Successfully changed active browser: browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
+<msg time="2025-04-11T21:18:26.814997" level="INFO">Reusing existing browser with id: browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
 <arg>chromium</arg>
 <arg>headless=No</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-04-09T14:17:33.459141" elapsed="0.004679"/>
+<status status="PASS" start="2025-04-11T21:18:26.812180" elapsed="0.002871"/>
 </kw>
 <kw name="Upload File By Selector" owner="Browser">
 <arg>input[type="file"]</arg>
@@ -281,40 +281,40 @@ found by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Uploads file from ``path`` to file input element matched by selector.</doc>
-<status status="PASS" start="2025-04-09T14:17:33.464298" elapsed="0.047739"/>
+<status status="PASS" start="2025-04-11T21:18:26.815413" elapsed="0.034778"/>
 </kw>
-<msg time="2025-04-09T14:17:33.515850" level="INFO">Set timeout to: 10000</msg>
-<status status="PASS" start="2025-04-09T14:17:33.458769" elapsed="0.054006"/>
+<msg time="2025-04-11T21:18:26.853091" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-04-11T21:18:26.811870" elapsed="0.038814"/>
 </test>
 <test id="s1-s2-t9" name="Test Checkbox" line="34">
 <kw name="New Browser" owner="Browser" type="SETUP">
-<msg time="2025-04-09T14:17:33.518246" level="INFO">Switching browser to browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
-<msg time="2025-04-09T14:17:33.521960" level="INFO">Successfully changed active browser: browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
-<msg time="2025-04-09T14:17:33.522148" level="INFO">Reusing existing browser with id: browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
+<msg time="2025-04-11T21:18:26.854695" level="INFO">Switching browser to browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
+<msg time="2025-04-11T21:18:26.856814" level="INFO">Successfully changed active browser: browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
+<msg time="2025-04-11T21:18:26.856966" level="INFO">Reusing existing browser with id: browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
 <arg>chromium</arg>
 <arg>headless=No</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-04-09T14:17:33.517458" elapsed="0.004797"/>
+<status status="PASS" start="2025-04-11T21:18:26.854202" elapsed="0.002839"/>
 </kw>
 <kw name="Check Checkbox" owner="Browser">
 <arg>id=my-check-1</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Checks the checkbox or selects radio button found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:33.523144" elapsed="0.013004"/>
+<status status="PASS" start="2025-04-11T21:18:26.857412" elapsed="0.011063"/>
 </kw>
 <kw name="Check Checkbox" owner="Browser">
 <arg>id=my-check-2</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Checks the checkbox or selects radio button found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:33.536503" elapsed="0.055662"/>
+<status status="PASS" start="2025-04-11T21:18:26.868854" elapsed="0.049952"/>
 </kw>
 <kw name="Get Checkbox State" owner="Browser">
-<msg time="2025-04-09T14:17:33.613816" level="INFO">Retrieved dom property for element id=my-check-1 containing true</msg>
-<msg time="2025-04-09T14:17:33.613948" level="INFO">Checkbox is checked</msg>
+<msg time="2025-04-11T21:18:26.931380" level="INFO">Retrieved dom property for element id=my-check-1 containing true</msg>
+<msg time="2025-04-11T21:18:26.931452" level="INFO">Checkbox is checked</msg>
 <arg>id=my-check-1</arg>
 <arg>==</arg>
 <arg>checked</arg>
@@ -322,11 +322,11 @@ found by ``selector``.</doc>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the state of the checkbox found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:33.592947" elapsed="0.021269"/>
+<status status="PASS" start="2025-04-11T21:18:26.919170" elapsed="0.012377"/>
 </kw>
 <kw name="Get Checkbox State" owner="Browser">
-<msg time="2025-04-09T14:17:33.630898" level="INFO">Retrieved dom property for element id=my-check-2 containing true</msg>
-<msg time="2025-04-09T14:17:33.631006" level="INFO">Checkbox is checked</msg>
+<msg time="2025-04-11T21:18:26.943468" level="INFO">Retrieved dom property for element id=my-check-2 containing true</msg>
+<msg time="2025-04-11T21:18:26.943642" level="INFO">Checkbox is checked</msg>
 <arg>id=my-check-2</arg>
 <arg>==</arg>
 <arg>checked</arg>
@@ -334,18 +334,18 @@ found by ``selector``.</doc>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the state of the checkbox found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:33.614843" elapsed="0.016288"/>
+<status status="PASS" start="2025-04-11T21:18:26.931939" elapsed="0.012281"/>
 </kw>
 <kw name="Uncheck Checkbox" owner="Browser">
 <arg>id=my-check-2</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Unchecks the checkbox found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:33.631637" elapsed="0.051006"/>
+<status status="PASS" start="2025-04-11T21:18:26.945417" elapsed="0.039230"/>
 </kw>
 <kw name="Get Checkbox State" owner="Browser">
-<msg time="2025-04-09T14:17:33.699622" level="INFO">Retrieved dom property for element id=my-check-2 containing false</msg>
-<msg time="2025-04-09T14:17:33.699723" level="INFO">Checkbox is unchecked</msg>
+<msg time="2025-04-11T21:18:26.997561" level="INFO">Retrieved dom property for element id=my-check-2 containing false</msg>
+<msg time="2025-04-11T21:18:26.997633" level="INFO">Checkbox is unchecked</msg>
 <arg>id=my-check-2</arg>
 <arg>==</arg>
 <arg>unchecked</arg>
@@ -354,33 +354,33 @@ found by ``selector``.</doc>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the state of the checkbox found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:33.683185" elapsed="0.016643"/>
+<status status="PASS" start="2025-04-11T21:18:26.985038" elapsed="0.012678"/>
 </kw>
-<msg time="2025-04-09T14:17:33.703499" level="INFO">Set timeout to: 10000</msg>
-<status status="PASS" start="2025-04-09T14:17:33.517002" elapsed="0.183284"/>
+<msg time="2025-04-11T21:18:26.999663" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-04-11T21:18:26.853862" elapsed="0.144171"/>
 </test>
 <test id="s1-s2-t10" name="Test Radio button" line="42">
 <kw name="New Browser" owner="Browser" type="SETUP">
-<msg time="2025-04-09T14:17:33.706779" level="INFO">Switching browser to browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
-<msg time="2025-04-09T14:17:33.710011" level="INFO">Successfully changed active browser: browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
-<msg time="2025-04-09T14:17:33.710160" level="INFO">Reusing existing browser with id: browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
+<msg time="2025-04-11T21:18:27.000956" level="INFO">Switching browser to browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
+<msg time="2025-04-11T21:18:27.003280" level="INFO">Successfully changed active browser: browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
+<msg time="2025-04-11T21:18:27.003419" level="INFO">Reusing existing browser with id: browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
 <arg>chromium</arg>
 <arg>headless=No</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-04-09T14:17:33.705213" elapsed="0.005031"/>
+<status status="PASS" start="2025-04-11T21:18:27.000477" elapsed="0.003024"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2025-04-09T14:17:33.711339" level="INFO">Clicks the element 'id=my-radio-2'.</msg>
+<msg time="2025-04-11T21:18:27.004320" level="INFO">Clicks the element 'id=my-radio-2'.</msg>
 <arg>id=my-radio-2</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:33.710611" elapsed="0.071321"/>
+<status status="PASS" start="2025-04-11T21:18:27.003869" elapsed="0.047222"/>
 </kw>
 <kw name="Get Element States" owner="Browser">
-<msg time="2025-04-09T14:17:33.827685" level="INFO">States are: ['attached', 'visible', 'enabled', 'editable', 'focused', 'checked']</msg>
+<msg time="2025-04-11T21:18:27.072427" level="INFO">States are: ['attached', 'visible', 'enabled', 'editable', 'focused', 'checked']</msg>
 <arg>id=my-radio-2</arg>
 <arg>contains</arg>
 <arg>checked</arg>
@@ -388,18 +388,18 @@ found by ``selector``.</doc>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Get the active states from the element found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:33.782609" elapsed="0.045246"/>
+<status status="PASS" start="2025-04-11T21:18:27.051497" elapsed="0.021042"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2025-04-09T14:17:33.829775" level="INFO">Clicks the element 'id=my-radio-1'.</msg>
+<msg time="2025-04-11T21:18:27.073476" level="INFO">Clicks the element 'id=my-radio-1'.</msg>
 <arg>id=my-radio-1</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:33.828688" elapsed="0.036879"/>
+<status status="PASS" start="2025-04-11T21:18:27.072948" elapsed="0.044398"/>
 </kw>
 <kw name="Get Element States" owner="Browser">
-<msg time="2025-04-09T14:17:33.899123" level="INFO">States are: ['attached', 'visible', 'enabled', 'editable', 'focused', 'checked']</msg>
+<msg time="2025-04-11T21:18:27.139228" level="INFO">States are: ['attached', 'visible', 'enabled', 'editable', 'focused', 'checked']</msg>
 <arg>id=my-radio-1</arg>
 <arg>contains</arg>
 <arg>checked</arg>
@@ -407,10 +407,10 @@ found by ``selector``.</doc>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Get the active states from the element found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:33.866236" elapsed="0.032984"/>
+<status status="PASS" start="2025-04-11T21:18:27.117722" elapsed="0.021602"/>
 </kw>
 <kw name="Get Element States" owner="Browser">
-<msg time="2025-04-09T14:17:33.920636" level="INFO">States are: ['attached', 'visible', 'enabled', 'editable', 'defocused', 'unchecked']</msg>
+<msg time="2025-04-11T21:18:27.154989" level="INFO">States are: ['attached', 'visible', 'enabled', 'editable', 'defocused', 'unchecked']</msg>
 <arg>id=my-radio-2</arg>
 <arg>not contains</arg>
 <arg>checked</arg>
@@ -419,27 +419,27 @@ found by ``selector``.</doc>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Get the active states from the element found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:33.899624" elapsed="0.021110"/>
+<status status="PASS" start="2025-04-11T21:18:27.139712" elapsed="0.015373"/>
 </kw>
-<msg time="2025-04-09T14:17:33.924685" level="INFO">Set timeout to: 10000</msg>
-<status status="PASS" start="2025-04-09T14:17:33.704434" elapsed="0.216840"/>
+<msg time="2025-04-11T21:18:27.157117" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-04-11T21:18:27.000181" elapsed="0.155259"/>
 </test>
 <test id="s1-s2-t11" name="Test Range" line="49">
 <kw name="New Browser" owner="Browser" type="SETUP">
-<msg time="2025-04-09T14:17:33.926786" level="INFO">Switching browser to browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
-<msg time="2025-04-09T14:17:33.929276" level="INFO">Successfully changed active browser: browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
-<msg time="2025-04-09T14:17:33.929459" level="INFO">Reusing existing browser with id: browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
+<msg time="2025-04-11T21:18:27.159875" level="INFO">Switching browser to browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
+<msg time="2025-04-11T21:18:27.162104" level="INFO">Successfully changed active browser: browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
+<msg time="2025-04-11T21:18:27.162229" level="INFO">Reusing existing browser with id: browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
 <arg>chromium</arg>
 <arg>headless=No</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-04-09T14:17:33.926029" elapsed="0.003517"/>
+<status status="PASS" start="2025-04-11T21:18:27.158538" elapsed="0.003752"/>
 </kw>
 <kw name="Drag And Drop Relative To" owner="Browser">
-<msg time="2025-04-09T14:17:33.952800" level="INFO">Moving mouse to x: 1020.0, y: 240.8000030517578 coordinates.</msg>
-<msg time="2025-04-09T14:17:33.983511" level="INFO">Moving mouse to x: 920.0, y: 240.8000030517578 coordinates.</msg>
-<msg time="2025-04-09T14:17:39.544439" level="INFO">No coordinates where set. Action appears at current position.</msg>
+<msg time="2025-04-11T21:18:27.171735" level="INFO">Moving mouse to x: 1020.0, y: 240.8000030517578 coordinates.</msg>
+<msg time="2025-04-11T21:18:27.182583" level="INFO">Moving mouse to x: 920.0, y: 240.8000030517578 coordinates.</msg>
+<msg time="2025-04-11T21:18:32.728487" level="INFO">No coordinates where set. Action appears at current position.</msg>
 <arg>[type="range"]</arg>
 <arg>-100</arg>
 <arg>0</arg>
@@ -448,140 +448,140 @@ found by ``selector``.</doc>
 <tag>Setter</tag>
 <doc>Executes a Drag&amp;Drop operation from the element selected by ``selector_from``
 to coordinates relative to the center of that element.</doc>
-<status status="PASS" start="2025-04-09T14:17:33.929903" elapsed="5.625595"/>
+<status status="PASS" start="2025-04-11T21:18:27.162625" elapsed="5.569351"/>
 </kw>
-<msg time="2025-04-09T14:17:39.559379" level="INFO">Set timeout to: 10000</msg>
-<status status="PASS" start="2025-04-09T14:17:33.925598" elapsed="5.630501"/>
+<msg time="2025-04-11T21:18:32.734091" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-04-11T21:18:27.157630" elapsed="5.574695"/>
 </test>
 <test id="s1-s2-t12" name="Test Date" line="52">
 <kw name="New Browser" owner="Browser" type="SETUP">
-<msg time="2025-04-09T14:17:39.561387" level="INFO">Switching browser to browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
-<msg time="2025-04-09T14:17:39.564148" level="INFO">Successfully changed active browser: browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
-<msg time="2025-04-09T14:17:39.564299" level="INFO">Reusing existing browser with id: browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
+<msg time="2025-04-11T21:18:32.735714" level="INFO">Switching browser to browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
+<msg time="2025-04-11T21:18:32.737802" level="INFO">Successfully changed active browser: browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
+<msg time="2025-04-11T21:18:32.737934" level="INFO">Reusing existing browser with id: browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
 <arg>chromium</arg>
 <arg>headless=No</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-04-09T14:17:39.560605" elapsed="0.003778"/>
+<status status="PASS" start="2025-04-11T21:18:32.735061" elapsed="0.002951"/>
 </kw>
 <kw name="Type Text" owner="Browser">
-<msg time="2025-04-09T14:17:39.565486" level="INFO">Types the text '2025-03-24' in the given field.</msg>
+<msg time="2025-04-11T21:18:32.738791" level="INFO">Types the text '2025-03-24' in the given field.</msg>
 <arg>css=input[name="my-date"]</arg>
 <arg>2025-03-24</arg>
 <arg>delay=0.1 s</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:39.564786" elapsed="1.407058"/>
+<status status="PASS" start="2025-04-11T21:18:32.738329" elapsed="1.189196"/>
 </kw>
-<msg time="2025-04-09T14:17:40.975005" level="INFO">Set timeout to: 10000</msg>
-<status status="PASS" start="2025-04-09T14:17:39.560121" elapsed="1.412225"/>
+<msg time="2025-04-11T21:18:33.930724" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-04-11T21:18:32.734761" elapsed="1.193260"/>
 </test>
 <test id="s1-s2-t13" name="Test Submit" line="56">
 <kw name="New Browser" owner="Browser" type="SETUP">
-<msg time="2025-04-09T14:17:40.976872" level="INFO">Switching browser to browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
-<msg time="2025-04-09T14:17:40.980046" level="INFO">Successfully changed active browser: browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
-<msg time="2025-04-09T14:17:40.980320" level="INFO">Reusing existing browser with id: browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
+<msg time="2025-04-11T21:18:33.932403" level="INFO">Switching browser to browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
+<msg time="2025-04-11T21:18:33.934611" level="INFO">Successfully changed active browser: browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
+<msg time="2025-04-11T21:18:33.934754" level="INFO">Reusing existing browser with id: browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
 <arg>chromium</arg>
 <arg>headless=No</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-04-09T14:17:40.976153" elapsed="0.004215"/>
+<status status="PASS" start="2025-04-11T21:18:33.931877" elapsed="0.002952"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2025-04-09T14:17:40.981446" level="INFO">Clicks the element 'css=button'.</msg>
+<msg time="2025-04-11T21:18:33.935620" level="INFO">Clicks the element 'css=button'.</msg>
 <arg>css=button</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:40.980755" elapsed="0.205227"/>
+<status status="PASS" start="2025-04-11T21:18:33.935195" elapsed="0.196243"/>
 </kw>
-<msg time="2025-04-09T14:17:41.190454" level="INFO">Set timeout to: 10000</msg>
-<status status="PASS" start="2025-04-09T14:17:40.975715" elapsed="0.210718"/>
+<msg time="2025-04-11T21:18:34.134916" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-04-11T21:18:33.931509" elapsed="0.200485"/>
 </test>
 <test id="s1-s2-t14" name="Test form submitted successfully" line="59">
 <kw name="New Browser" owner="Browser" type="SETUP">
-<msg time="2025-04-09T14:17:41.192853" level="INFO">Switching browser to browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
-<msg time="2025-04-09T14:17:41.196157" level="INFO">Successfully changed active browser: browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
-<msg time="2025-04-09T14:17:41.196337" level="INFO">Reusing existing browser with id: browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
+<msg time="2025-04-11T21:18:34.139373" level="INFO">Switching browser to browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
+<msg time="2025-04-11T21:18:34.143741" level="INFO">Successfully changed active browser: browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
+<msg time="2025-04-11T21:18:34.144026" level="INFO">Reusing existing browser with id: browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
 <arg>chromium</arg>
 <arg>headless=No</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-04-09T14:17:41.192067" elapsed="0.004371"/>
+<status status="PASS" start="2025-04-11T21:18:34.138275" elapsed="0.005888"/>
 </kw>
 <kw name="Get Text" owner="Browser">
-<msg time="2025-04-09T14:17:41.234154" level="INFO">Text: 'Received!'</msg>
-<msg time="2025-04-09T14:17:41.234355" level="INFO">${message} = Received!</msg>
+<msg time="2025-04-11T21:18:34.183152" level="INFO">Text: 'Received!'</msg>
+<msg time="2025-04-11T21:18:34.183297" level="INFO">${message} = Received!</msg>
 <var>${message}</var>
 <arg>css=#message</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:41.196950" elapsed="0.037446"/>
+<status status="PASS" start="2025-04-11T21:18:34.144648" elapsed="0.038671"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>${message}</arg>
 <arg>Received!</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-04-09T14:17:41.234889" elapsed="0.000394"/>
+<status status="PASS" start="2025-04-11T21:18:34.183683" elapsed="0.000339"/>
 </kw>
-<msg time="2025-04-09T14:17:41.237671" level="INFO">Set timeout to: 10000</msg>
-<status status="PASS" start="2025-04-09T14:17:41.191467" elapsed="0.044085"/>
+<msg time="2025-04-11T21:18:34.185970" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-04-11T21:18:34.136441" elapsed="0.047773"/>
 </test>
-<status status="PASS" start="2025-04-09T14:17:25.387167" elapsed="15.851896"/>
+<status status="PASS" start="2025-04-11T21:18:19.863720" elapsed="14.322834"/>
 </suite>
 <suite id="s1-s3" name="Task 4" source="C:\Users\Rosa\OneDrive\Tiedostot\Hyte\Diary_app\MyHealth-fe\tests\task_4.robot">
 <test id="s1-s3-t1" name="Login to MyHealth" line="7">
 <kw name="New Browser" owner="Browser">
-<msg time="2025-04-09T14:17:41.248142" level="INFO">Switching browser to browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
-<msg time="2025-04-09T14:17:41.250517" level="INFO">Successfully changed active browser: browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
-<msg time="2025-04-09T14:17:41.250676" level="INFO">Reusing existing browser with id: browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
+<msg time="2025-04-11T21:18:34.194594" level="INFO">Switching browser to browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
+<msg time="2025-04-11T21:18:34.198188" level="INFO">Successfully changed active browser: browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
+<msg time="2025-04-11T21:18:34.198457" level="INFO">Reusing existing browser with id: browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
 <arg>chromium</arg>
 <arg>headless=No</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-04-09T14:17:41.247606" elapsed="0.003173"/>
+<status status="PASS" start="2025-04-11T21:18:34.193981" elapsed="0.004731"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2025-04-09T14:17:41.390680" level="INFO">Successfully initialized new page object and opened url: http://localhost:5173/</msg>
+<msg time="2025-04-11T21:18:34.352935" level="INFO">Successfully initialized new page object and opened url: http://localhost:5173/</msg>
 <arg>http://localhost:5173/</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2025-04-09T14:17:41.251347" elapsed="0.139545"/>
+<status status="PASS" start="2025-04-11T21:18:34.199993" elapsed="0.153266"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2025-04-09T14:17:41.392255" level="INFO">Clicks the element 'id=openLoginModal'.</msg>
+<msg time="2025-04-11T21:18:34.356739" level="INFO">Clicks the element 'id=openLoginModal'.</msg>
 <arg>id=openLoginModal</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:41.391453" elapsed="0.078582"/>
+<status status="PASS" start="2025-04-11T21:18:34.355358" elapsed="0.074146"/>
 </kw>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2025-04-09T14:17:41.478514" level="INFO">Waited for Element with selector id=loginModal at state visible</msg>
+<msg time="2025-04-11T21:18:34.436916" level="INFO">Waited for Element with selector id=loginModal at state visible</msg>
 <arg>id=loginModal</arg>
 <arg>visible</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2025-04-09T14:17:41.470452" elapsed="0.008221"/>
+<status status="PASS" start="2025-04-11T21:18:34.429974" elapsed="0.007147"/>
 </kw>
 <kw name="Type Text" owner="Browser">
-<msg time="2025-04-09T14:17:41.479947" level="INFO">Types the text 'Kattimau' in the given field.</msg>
+<msg time="2025-04-11T21:18:34.438287" level="INFO">Types the text 'Kattimau' in the given field.</msg>
 <arg>css=#loginModal input[name="username"]</arg>
 <arg>${Username}</arg>
 <arg>delay=0.1 s</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:41.479080" elapsed="0.927620"/>
+<status status="PASS" start="2025-04-11T21:18:34.437541" elapsed="0.923428"/>
 </kw>
 <kw name="Type Secret" owner="Browser">
 <arg>css=#loginModal input[name="password"]</arg>
@@ -591,194 +591,194 @@ to coordinates relative to the center of that element.</doc>
 <tag>Setter</tag>
 <doc>Types the given secret from ``variable_name`` into the text field
 found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:42.407108" elapsed="1.497614"/>
+<status status="PASS" start="2025-04-11T21:18:35.361581" elapsed="1.432402"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2025-04-09T14:17:43.905778" level="INFO">Clicks the element 'css=#loginModal button.loginuser'.</msg>
+<msg time="2025-04-11T21:18:36.795181" level="INFO">Clicks the element 'css=#loginModal button.loginuser'.</msg>
 <arg>css=#loginModal button.loginuser</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:43.905221" elapsed="0.029300"/>
+<status status="PASS" start="2025-04-11T21:18:36.794717" elapsed="0.027018"/>
 </kw>
-<msg time="2025-04-09T14:17:43.937242" level="INFO">Set timeout to: 10000</msg>
-<status status="PASS" start="2025-04-09T14:17:41.247250" elapsed="2.687711"/>
+<msg time="2025-04-11T21:18:36.825035" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-04-11T21:18:34.193309" elapsed="2.628849"/>
 </test>
 <test id="s1-s3-t2" name="Go to Medication form" line="23">
 <kw name="Go To" owner="Browser">
-<msg time="2025-04-09T14:17:44.032392" level="INFO">Successfully opened URL http://localhost:5173/medication.html</msg>
+<msg time="2025-04-11T21:18:36.923757" level="INFO">Successfully opened URL http://localhost:5173/medication.html</msg>
 <arg>http://localhost:5173/medication.html</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Navigates to the given ``url``.</doc>
-<status status="PASS" start="2025-04-09T14:17:43.938835" elapsed="0.093726"/>
+<status status="PASS" start="2025-04-11T21:18:36.827004" elapsed="0.096936"/>
 </kw>
-<msg time="2025-04-09T14:17:44.037128" level="INFO">Set timeout to: 10000</msg>
-<status status="PASS" start="2025-04-09T14:17:43.938248" elapsed="0.095106"/>
+<msg time="2025-04-11T21:18:36.927907" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-04-11T21:18:36.826308" elapsed="0.098319"/>
 </test>
 <test id="s1-s3-t3" name="Test Medication Date" line="26">
 <kw name="Type Text" owner="Browser">
-<msg time="2025-04-09T14:17:44.040001" level="INFO">Types the text '28-03-2025' in the given field.</msg>
+<msg time="2025-04-11T21:18:36.930064" level="INFO">Types the text '28-03-2025' in the given field.</msg>
 <arg>css=input[id="date"]</arg>
 <arg>28-03-2025</arg>
 <arg>delay=0.1s</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:44.038752" elapsed="1.166451"/>
+<status status="PASS" start="2025-04-11T21:18:36.929364" elapsed="1.145829"/>
 </kw>
-<msg time="2025-04-09T14:17:45.208250" level="INFO">Set timeout to: 10000</msg>
-<status status="PASS" start="2025-04-09T14:17:44.037924" elapsed="1.167735"/>
+<msg time="2025-04-11T21:18:38.077641" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-04-11T21:18:36.928811" elapsed="1.147008"/>
 </test>
 <test id="s1-s3-t4" name="Test Medication Name" line="29">
 <kw name="Type Text" owner="Browser">
-<msg time="2025-04-09T14:17:45.210077" level="INFO">Types the text 'Kestox' in the given field.</msg>
+<msg time="2025-04-11T21:18:38.080101" level="INFO">Types the text 'Kestox' in the given field.</msg>
 <arg>css=input[id="name"]</arg>
 <arg>Kestox</arg>
 <arg>delay=0.1s</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:45.209323" elapsed="0.713539"/>
+<status status="PASS" start="2025-04-11T21:18:38.079639" elapsed="0.687606"/>
 </kw>
-<msg time="2025-04-09T14:17:45.925605" level="INFO">Set timeout to: 10000</msg>
-<status status="PASS" start="2025-04-09T14:17:45.208922" elapsed="0.714382"/>
+<msg time="2025-04-11T21:18:38.770580" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-04-11T21:18:38.079171" elapsed="0.688608"/>
 </test>
 <test id="s1-s3-t5" name="Test Dosage" line="32">
 <kw name="Type Text" owner="Browser">
-<msg time="2025-04-09T14:17:45.927024" level="INFO">Types the text '10mg' in the given field.</msg>
+<msg time="2025-04-11T21:18:38.772588" level="INFO">Types the text '10mg' in the given field.</msg>
 <arg>css=input[id="dosage"]</arg>
 <arg>10mg</arg>
 <arg>delay=0.1s</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:45.926482" elapsed="0.480635"/>
+<status status="PASS" start="2025-04-11T21:18:38.771836" elapsed="0.479984"/>
 </kw>
-<msg time="2025-04-09T14:17:46.412642" level="INFO">Set timeout to: 10000</msg>
-<status status="PASS" start="2025-04-09T14:17:45.926160" elapsed="0.482036"/>
+<msg time="2025-04-11T21:18:39.254473" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-04-11T21:18:38.771341" elapsed="0.481169"/>
 </test>
 <test id="s1-s3-t6" name="Test Taken At" line="35">
 <kw name="Type Text" owner="Browser">
-<msg time="2025-04-09T14:17:46.417079" level="INFO">Types the text '08:00' in the given field.</msg>
+<msg time="2025-04-11T21:18:39.256217" level="INFO">Types the text '08:00' in the given field.</msg>
 <arg>css=input[id="taken_at"]</arg>
 <arg>08:00</arg>
 <arg>delay=0.1s</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:46.415430" elapsed="0.575192"/>
+<status status="PASS" start="2025-04-11T21:18:39.255714" elapsed="0.580403"/>
 </kw>
-<msg time="2025-04-09T14:17:46.993274" level="INFO">Set timeout to: 10000</msg>
-<status status="PASS" start="2025-04-09T14:17:46.414397" elapsed="0.576630"/>
+<msg time="2025-04-11T21:18:39.841569" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-04-11T21:18:39.255319" elapsed="0.582197"/>
 </test>
 <test id="s1-s3-t7" name="Test Notes" line="38">
 <kw name="Type Text" owner="Browser">
-<msg time="2025-04-09T14:17:46.995125" level="INFO">Types the text 'For an allergic attack' in the given field.</msg>
+<msg time="2025-04-11T21:18:39.844998" level="INFO">Types the text 'For an allergic attack' in the given field.</msg>
 <arg>css=input[id="notes"]</arg>
 <arg>For an allergic attack</arg>
 <arg>delay=0.1s</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:46.994315" elapsed="2.563395"/>
+<status status="PASS" start="2025-04-11T21:18:39.844253" elapsed="2.480356"/>
 </kw>
-<msg time="2025-04-09T14:17:49.563355" level="INFO">Set timeout to: 10000</msg>
-<status status="PASS" start="2025-04-09T14:17:46.993935" elapsed="2.564864"/>
+<msg time="2025-04-11T21:18:42.330563" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-04-11T21:18:39.843608" elapsed="2.482035"/>
 </test>
 <test id="s1-s3-t8" name="Test Submit Medication" line="41">
 <kw name="Click" owner="Browser">
-<msg time="2025-04-09T14:17:49.568678" level="INFO">Clicks the element '//button[text()='Add Medication']'.</msg>
+<msg time="2025-04-11T21:18:42.334275" level="INFO">Clicks the element '//button[text()='Add Medication']'.</msg>
 <arg>//button[text()='Add Medication']</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:49.566682" elapsed="0.052094"/>
+<status status="PASS" start="2025-04-11T21:18:42.333645" elapsed="0.036197"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-09T14:17:51.620014" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-04-11T21:18:44.371305" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-09T14:17:49.619231" elapsed="2.000946"/>
+<status status="PASS" start="2025-04-11T21:18:42.370327" elapsed="2.001254"/>
 </kw>
-<msg time="2025-04-09T14:17:51.624142" level="INFO">Set timeout to: 10000</msg>
-<status status="PASS" start="2025-04-09T14:17:49.565514" elapsed="2.055096"/>
+<msg time="2025-04-11T21:18:44.375081" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-04-11T21:18:42.332995" elapsed="2.039419"/>
 </test>
-<status status="PASS" start="2025-04-09T14:17:41.243138" elapsed="10.381945"/>
+<status status="PASS" start="2025-04-11T21:18:34.189360" elapsed="10.187347"/>
 </suite>
 <suite id="s1-s4" name="Task 5" source="C:\Users\Rosa\OneDrive\Tiedostot\Hyte\Diary_app\MyHealth-fe\tests\task_5.robot">
 <test id="s1-s4-t1" name="Login to MyHealth using env." line="9">
 <kw name="New Browser" owner="Browser">
-<msg time="2025-04-09T14:17:51.688174" level="INFO">Switching browser to browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
-<msg time="2025-04-09T14:17:51.696665" level="INFO">Successfully changed active browser: browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
-<msg time="2025-04-09T14:17:51.696823" level="INFO">Reusing existing browser with id: browser=d107c9eb-76d5-4d2b-92ce-744c5042de1e</msg>
+<msg time="2025-04-11T21:18:44.427301" level="INFO">Switching browser to browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
+<msg time="2025-04-11T21:18:44.432698" level="INFO">Successfully changed active browser: browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
+<msg time="2025-04-11T21:18:44.432847" level="INFO">Reusing existing browser with id: browser=54436f78-247a-4e8c-bb5e-ca685158db3e</msg>
 <arg>chromium</arg>
 <arg>headless=No</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-04-09T14:17:51.686933" elapsed="0.009984"/>
+<status status="PASS" start="2025-04-11T21:18:44.425867" elapsed="0.007035"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2025-04-09T14:17:51.802718" level="INFO">Successfully initialized new page object and opened url: http://localhost:5173/</msg>
+<msg time="2025-04-11T21:18:44.578751" level="INFO">Successfully initialized new page object and opened url: http://localhost:5173/</msg>
 <arg>http://localhost:5173/</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2025-04-09T14:17:51.697243" elapsed="0.105656"/>
+<status status="PASS" start="2025-04-11T21:18:44.433557" elapsed="0.145373"/>
 </kw>
 <kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-04-09T14:17:51.803953" level="INFO">${USERNAME} = Kattimau</msg>
+<msg time="2025-04-11T21:18:44.579810" level="INFO">${USERNAME} = Kattimau</msg>
 <var>${USERNAME}</var>
 <arg>USERNAME</arg>
 <doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-04-09T14:17:51.803306" elapsed="0.000707"/>
+<status status="PASS" start="2025-04-11T21:18:44.579532" elapsed="0.000319"/>
 </kw>
 <kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-04-09T14:17:51.805033" level="INFO">${PASSWORD} = Salainensana!</msg>
+<msg time="2025-04-11T21:18:44.580442" level="INFO">${PASSWORD} = Salainensana!</msg>
 <var>${PASSWORD}</var>
 <arg>PASSWORD</arg>
 <doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-04-09T14:17:51.804464" elapsed="0.000634"/>
+<status status="PASS" start="2025-04-11T21:18:44.580219" elapsed="0.000246"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-04-09T14:17:51.805814" level="INFO">USERNAME: Kattimau</msg>
+<msg time="2025-04-11T21:18:44.581262" level="INFO">USERNAME: Kattimau</msg>
 <arg>USERNAME: ${USERNAME}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-04-09T14:17:51.805420" elapsed="0.000441"/>
+<status status="PASS" start="2025-04-11T21:18:44.581077" elapsed="0.000221"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-04-09T14:17:51.806315" level="INFO">PASSWORD:</msg>
+<msg time="2025-04-11T21:18:44.581974" level="INFO">PASSWORD:</msg>
 <arg>PASSWORD:</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-04-09T14:17:51.806086" elapsed="0.000265"/>
+<status status="PASS" start="2025-04-11T21:18:44.581848" elapsed="0.000160"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2025-04-09T14:17:51.807122" level="INFO">Clicks the element 'id=openLoginModal'.</msg>
+<msg time="2025-04-11T21:18:44.582909" level="INFO">Clicks the element 'id=openLoginModal'.</msg>
 <arg>id=openLoginModal</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:51.806543" elapsed="0.062836"/>
+<status status="PASS" start="2025-04-11T21:18:44.582573" elapsed="0.133680"/>
 </kw>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2025-04-09T14:17:51.877305" level="INFO">Waited for Element with selector id=loginModal at state visible</msg>
+<msg time="2025-04-11T21:18:44.725146" level="INFO">Waited for Element with selector id=loginModal at state visible</msg>
 <arg>id=loginModal</arg>
 <arg>visible</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2025-04-09T14:17:51.869884" elapsed="0.007589"/>
+<status status="PASS" start="2025-04-11T21:18:44.716922" elapsed="0.008402"/>
 </kw>
 <kw name="Type Text" owner="Browser">
-<msg time="2025-04-09T14:17:51.878563" level="INFO">Types the text 'Kattimau' in the given field.</msg>
+<msg time="2025-04-11T21:18:44.727290" level="INFO">Types the text 'Kattimau' in the given field.</msg>
 <arg>css=#loginModal input[name="username"]</arg>
 <arg>${USERNAME}</arg>
 <arg>delay=0.1 s</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:51.877839" elapsed="0.929121"/>
+<status status="PASS" start="2025-04-11T21:18:44.726092" elapsed="0.919739"/>
 </kw>
 <kw name="Type Secret" owner="Browser">
 <arg>css=#loginModal input[name="password"]</arg>
@@ -788,70 +788,70 @@ found by ``selector``.</doc>
 <tag>Setter</tag>
 <doc>Types the given secret from ``variable_name`` into the text field
 found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:52.807614" elapsed="1.480312"/>
+<status status="PASS" start="2025-04-11T21:18:45.647077" elapsed="1.458581"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2025-04-09T14:17:54.289139" level="INFO">Clicks the element 'css=#loginModal button.loginuser'.</msg>
+<msg time="2025-04-11T21:18:47.106927" level="INFO">Clicks the element 'css=#loginModal button.loginuser'.</msg>
 <arg>css=#loginModal button.loginuser</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:54.288442" elapsed="0.026410"/>
+<status status="PASS" start="2025-04-11T21:18:47.106396" elapsed="0.030741"/>
 </kw>
-<msg time="2025-04-09T14:17:54.317673" level="INFO">Set timeout to: 10000</msg>
-<status status="PASS" start="2025-04-09T14:17:51.686042" elapsed="2.629322"/>
+<msg time="2025-04-11T21:18:47.139871" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-04-11T21:18:44.424758" elapsed="2.713172"/>
 </test>
-<status status="PASS" start="2025-04-09T14:17:51.628905" elapsed="2.689753"/>
+<status status="PASS" start="2025-04-11T21:18:44.380684" elapsed="2.760834"/>
 </suite>
 <suite id="s1-s5" name="Task 6" source="C:\Users\Rosa\OneDrive\Tiedostot\Hyte\Diary_app\MyHealth-fe\tests\task_6.robot">
 <test id="s1-s5-t1" name="Login to MyHealth" line="10">
 <kw name="New Browser" owner="Browser">
-<msg time="2025-04-09T14:17:55.503586" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\Rosa\\OneDrive\\Tiedostot\\Hyte\\Diary_app\\MyHealth-fe\\outputs\\browser\\traces\\temp\\7c2ec973-1f58-40d9-9e7d-bf59eacecda0"}</msg>
-<msg time="2025-04-09T14:17:55.574543" level="INFO">Starting Browser process C:\Users\Rosa\OneDrive\Tiedostot\Hyte\Diary_app\MyHealth-fe\.venv\Lib\site-packages\Browser\wrapper\index.js using port 60007</msg>
-<msg time="2025-04-09T14:17:55.574646" level="INFO">Node startup parameters: ['node', 'C:\\Users\\Rosa\\OneDrive\\Tiedostot\\Hyte\\Diary_app\\MyHealth-fe\\.venv\\Lib\\site-packages\\Browser\\wrapper\\index.js', '60007']</msg>
-<msg time="2025-04-09T14:17:57.131246" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\Rosa\\OneDrive\\Tiedostot\\Hyte\\Diary_app\\MyHealth-fe\\outputs\\browser\\traces\\temp\\7c2ec973-1f58-40d9-9e7d-bf59eacecda0"}</msg>
+<msg time="2025-04-11T21:18:48.097950" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\Rosa\\OneDrive\\Tiedostot\\Hyte\\Diary_app\\MyHealth-fe\\outputs\\browser\\traces\\temp\\c89280d8-d464-4cbf-a560-26778182c44d"}</msg>
+<msg time="2025-04-11T21:18:48.139807" level="INFO">Starting Browser process C:\Users\Rosa\OneDrive\Tiedostot\Hyte\Diary_app\MyHealth-fe\.venv\Lib\site-packages\Browser\wrapper\index.js using port 50492</msg>
+<msg time="2025-04-11T21:18:48.139935" level="INFO">Node startup parameters: ['node', 'C:\\Users\\Rosa\\OneDrive\\Tiedostot\\Hyte\\Diary_app\\MyHealth-fe\\.venv\\Lib\\site-packages\\Browser\\wrapper\\index.js', '50492']</msg>
+<msg time="2025-04-11T21:18:48.902355" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\Rosa\\OneDrive\\Tiedostot\\Hyte\\Diary_app\\MyHealth-fe\\outputs\\browser\\traces\\temp\\c89280d8-d464-4cbf-a560-26778182c44d"}</msg>
 <arg>chromium</arg>
 <arg>headless=No</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-04-09T14:17:55.502590" elapsed="1.628923"/>
+<status status="PASS" start="2025-04-11T21:18:48.096349" elapsed="0.806302"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2025-04-09T14:17:57.721083" level="INFO">Successfully initialized new page object and opened url: http://localhost:5173/</msg>
-<msg time="2025-04-09T14:17:57.721484" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<msg time="2025-04-11T21:18:49.270740" level="INFO">Successfully initialized new page object and opened url: http://localhost:5173/</msg>
+<msg time="2025-04-11T21:18:49.270886" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
 <arg>http://localhost:5173/</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2025-04-09T14:17:57.132034" elapsed="0.590307"/>
+<status status="PASS" start="2025-04-11T21:18:48.903131" elapsed="0.367938"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2025-04-09T14:17:57.725770" level="INFO">Clicks the element 'id=openLoginModal'.</msg>
+<msg time="2025-04-11T21:18:49.272226" level="INFO">Clicks the element 'id=openLoginModal'.</msg>
 <arg>id=openLoginModal</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:57.724289" elapsed="0.133050"/>
+<status status="PASS" start="2025-04-11T21:18:49.271544" elapsed="0.117511"/>
 </kw>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2025-04-09T14:17:57.867997" level="INFO">Waited for Element with selector id=loginModal at state visible</msg>
+<msg time="2025-04-11T21:18:49.398526" level="INFO">Waited for Element with selector id=loginModal at state visible</msg>
 <arg>id=loginModal</arg>
 <arg>visible</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2025-04-09T14:17:57.858925" elapsed="0.009246"/>
+<status status="PASS" start="2025-04-11T21:18:49.389579" elapsed="0.009133"/>
 </kw>
 <kw name="Type Text" owner="Browser">
-<msg time="2025-04-09T14:17:57.869351" level="INFO">Types the text '***' in the given field.</msg>
+<msg time="2025-04-11T21:18:49.399567" level="INFO">Types the text '***' in the given field.</msg>
 <arg>css=#loginModal input[name="username"]</arg>
 <arg>${Username}</arg>
 <arg>delay=0.1 s</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:57.868598" elapsed="0.921477"/>
+<status status="PASS" start="2025-04-11T21:18:49.399052" elapsed="0.941683"/>
 </kw>
 <kw name="Type Secret" owner="Browser">
 <arg>css=#loginModal input[name="password"]</arg>
@@ -861,22 +861,22 @@ found by ``selector``.</doc>
 <tag>Setter</tag>
 <doc>Types the given secret from ``variable_name`` into the text field
 found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:17:58.791170" elapsed="1.515188"/>
+<status status="PASS" start="2025-04-11T21:18:50.341576" elapsed="1.501240"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2025-04-09T14:18:00.309921" level="INFO">Clicks the element 'css=#loginModal button.loginuser'.</msg>
+<msg time="2025-04-11T21:18:51.844121" level="INFO">Clicks the element 'css=#loginModal button.loginuser'.</msg>
 <arg>css=#loginModal button.loginuser</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-04-09T14:18:00.308033" elapsed="0.024247"/>
+<status status="PASS" start="2025-04-11T21:18:51.843617" elapsed="0.023407"/>
 </kw>
-<msg time="2025-04-09T14:18:00.336407" level="INFO">Set timeout to: 10000</msg>
-<status status="PASS" start="2025-04-09T14:17:55.500863" elapsed="4.831856"/>
+<msg time="2025-04-11T21:18:51.870778" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-04-11T21:18:48.093784" elapsed="3.773660"/>
 </test>
-<status status="PASS" start="2025-04-09T14:17:54.323198" elapsed="6.014093"/>
+<status status="PASS" start="2025-04-11T21:18:47.145245" elapsed="4.726246"/>
 </suite>
-<status status="PASS" start="2025-04-09T14:17:19.021437" elapsed="41.409196"/>
+<status status="PASS" start="2025-04-11T21:18:07.367221" elapsed="44.589723"/>
 </suite>
 <statistics>
 <total>
@@ -894,7 +894,7 @@ found by ``selector``.</doc>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-04-09T14:17:51.661632" level="ERROR">Error in file 'C:\Users\Rosa\OneDrive\Tiedostot\Hyte\Diary_app\MyHealth-fe\tests\task_5.robot' on line 5: Importing library 'DotenvLibrary' failed: ModuleNotFoundError: No module named 'DotenvLibrary'
+<msg time="2025-04-11T21:18:44.403472" level="ERROR">Error in file 'C:\Users\Rosa\OneDrive\Tiedostot\Hyte\Diary_app\MyHealth-fe\tests\task_5.robot' on line 5: Importing library 'DotenvLibrary' failed: ModuleNotFoundError: No module named 'DotenvLibrary'
 Traceback (most recent call last):
   None
 PYTHONPATH:
