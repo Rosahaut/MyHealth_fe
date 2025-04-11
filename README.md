@@ -566,6 +566,6 @@ cp outputs/report.html docs/
 
 3. Lopuksi painoin `Tallenna` painiketta.
 
-**4. Hetken kuluttua suoritettuani toiminnot Githubissa sain osoitteen `🔗https://rosahaut.github.io/MyHealth_fe/` josta testien tulokset ovat nähtävillä selaimessa.**
+**4. Hetken kuluttua suoritettuani toiminnot Githubissa sain osoitteen *[🔗https://rosahaut.github.io/MyHealth_fe/](https://rosahaut.github.io/MyHealth_fe/)*, josta testien tulokset ovat nähtävillä selaimessa.**
 
 ---
