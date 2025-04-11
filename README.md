@@ -140,9 +140,9 @@ Alla on tekemäni esimerkki kirjautumistestistä Robot Frameworkin ja Browser-ki
 ${Username}     Tähän käyttäjänimi
 ${Password}     Tähän salasana
 ```
-**Loin tiedoston ```Keywords.robot``` jossa määrittelen testissä käytettävät muuttujat (kansio ei ole näkyvissä githubissa salassapidettävien tietojen vuoksi):** *käyttäjätunnus ja salasana.*
+**Loin tiedoston `Keywords.robot` jossa määrittelen testissä käytettävät muuttujat (kansio ei ole näkyvissä githubissa salassapidettävien tietojen vuoksi):** *käyttäjätunnus ja salasana.*
 
-#### **Asetukset ja Testitapaus - testi ```task_2.robot``` tiedostossa**
+#### **Asetukset ja Testitapaus - testi *[task_2.robot](tests/task_2.robot)* tiedostossa**
 ```robot
 *** Settings ***
 Library    Browser    auto_closing_level=KEEP
@@ -193,7 +193,7 @@ Tehtävänä oli tukia lisää Browser Libraryn käyttöä. Minun täytyi tehdä
 
 Linkki annettuun esimerkkisivustoon: **[Web form](https://www.selenium.dev/selenium/web/web-form.html)**
 
-### Testikoodi - testi ```task_3.robot``` tiedostossa:
+### Testikoodi - testi *[task_3.robot](tests/task_3.robot)* tiedostossa:
 
 ```robot
 *** Settings ***
@@ -300,7 +300,7 @@ Testissä onnistuin testaamaan kaikkien kenttien toimintaa, paitsi värivalitsim
 
 Tehtävänä oli tehdä testi, joka tekee uuden merkinnän omalle sovellukselleni. käytin testissä Lääkitysseurantaan tarkoitettua kentää. testissä kirjaudun ensin käyttäjällä sisälle ja siirryn lääkitystietojen lisäykseen MyHealth-sovelluksessa, tämän jälkeen syötän tiedot lääkitysseurantaan ja tallennan nämä.
 
-### Testikoodi - testi ```task_4.robot``` tiedostossa:
+### Testikoodi - testi *[task_4.robot](tests/task_4.robot)* tiedostossa:
 
 ```robot
 *** Settings ***
@@ -386,7 +386,7 @@ USERNAME=Oma käyttäjänimi tähän
 PASSWORD=Oma salasana tähän 
 ```
 
-### Määritellään muuttujat ```load_env.py``` tiedostossa:
+### Määritellään muuttujat `load_env.py` tiedostossa:
 
 ```robot
 import os
@@ -398,7 +398,7 @@ USERNAME = os.getenv('USERNAME')
 PASSWORD = os.getenv('PASSWORD')
 ```
 
-### Testikoodi - testi ```task_5.robot``` tiedostossa:
+### Testikoodi - testi *[task_5.robot](tests/task_5.robot)* tiedostossa:
 
 ```robot
 *** Settings ***
@@ -465,7 +465,7 @@ Testi onnistui ja alla kuvakaappaus saamastani tuloksesta vs coden terminaalissa
 
 Tehtävänä oli tehdä kirjautumistesti omalle Myhealth-sovellukselle, missä sekä salasana että käyttäjätunnus on kryptattu käyttäen CryptoLibrarya.
 
-### Testikoodi - testi ```task_6.robot``` tiedostossa:
+### Testikoodi - testi *[task_6.robot](tests/task_6.robot)* tiedostossa:
 
 ```robot
 *** Settings ***
