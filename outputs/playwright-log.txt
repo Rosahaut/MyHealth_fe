@@ -213,3 +213,7 @@
 {"level":30,"time":"2025-04-17T13:04:10.574Z","pid":19844,"hostname":"LAPTOP-PHUP67RL","msg":"Start of node method click"}
 {"level":30,"time":"2025-04-17T13:04:10.574Z","pid":19844,"hostname":"LAPTOP-PHUP67RL","msg":"Strict mode is enabled, find Locator with css=#loginModal button.loginuser in page."}
 {"level":30,"time":"2025-04-17T13:04:10.598Z","pid":19844,"hostname":"LAPTOP-PHUP67RL","msg":"End of node method click"}
+{"level":30,"time":"2025-04-17T13:34:30.873Z","pid":19844,"hostname":"LAPTOP-PHUP67RL","msg":"Removed page=bd4b6e22-eac0-4223-b16b-12baa35fd94f from context=2ad4e9a7-83a1-448f-9afa-791c2f3fff42 page stack"}
+{"level":30,"time":"2025-04-17T13:34:30.884Z","pid":19844,"hostname":"LAPTOP-PHUP67RL","msg":"Removed page=d9ced70a-ef55-45cc-971b-f94609a2628e from context=2ad4e9a7-83a1-448f-9afa-791c2f3fff42 page stack"}
+{"level":30,"time":"2025-04-17T13:34:30.888Z","pid":19844,"hostname":"LAPTOP-PHUP67RL","msg":"Removed page=dd1d1442-6926-43b0-abf9-2ba9c7e0e514 from context=2ad4e9a7-83a1-448f-9afa-791c2f3fff42 page stack"}
+{"level":30,"time":"2025-04-17T13:34:30.890Z","pid":19844,"hostname":"LAPTOP-PHUP67RL","msg":"Removed page=f786adca-aa8f-475c-ba2e-a8d1aa3ed0c1 from context=2ad4e9a7-83a1-448f-9afa-791c2f3fff42 page stack"}

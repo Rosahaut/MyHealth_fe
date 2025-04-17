@@ -569,3 +569,39 @@ cp outputs/report.html docs/
 **4. Hetken kuluttua suoritettuani toiminnot Githubissa sain osoitteen *[https://rosahaut.github.io/MyHealth_fe/](https://rosahaut.github.io/MyHealth_fe/)*, josta testien tulokset ovat nähtävillä selaimessa.**
 
 ---
+
+## Tehtävä 9
+
+Tehtävänä oli suorittaa testi joilla testaan oman taustapalvelimen toimintaa.
+
+### Testikoodi - testi *[task_9.robot](tests/task_9.robot)* tiedostossa:
+
+```robot
+*** Settings ***
+Library    Collections
+Library    RequestsLibrary
+Resource   Keywords.robot
+
+Suite Setup    Create Session    url    http://localhost:3000/api/users
+
+*** Test Cases ***
+
+Post Create User
+    ${body}=    Create Dictionary    username=${Username}    password=${Password}    email=${email}
+    ${response}=    POST    url=http://localhost:3000/api/users    json=${body}    expected_status=anything
+
+    Log    ${response.json()}
+
+    Status Should Be    201    ${response}
+```
+Tämä testi tarkistaa, toimiiko **uuden käyttäjän luonti** oikein sovelluksen rajapinnan kautta.
+
+### Testin kuvaus:
+
+1. Alustaa yhteyden osoitteeseen `http://localhost:3000/api/users`
+2. Luo testikäyttäjän tiedot: käyttäjänimi, salasana ja sähköposti
+3. Lähettää POST-pyynnön `users`-päätepisteeseen (API)
+4. Tulostaa palvelimen vastauksen testilokiin
+5. Varmistaa, että palvelin palauttaa **statuskoodin 201**, eli käyttäjä luotiin onnistuneesti
+
+---

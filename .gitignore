@@ -27,5 +27,8 @@ dist-ssr
 .venv
 browser¨
 Keywords.robot
+keywords2.robot
 
 .env
+
+browser/output.xml
