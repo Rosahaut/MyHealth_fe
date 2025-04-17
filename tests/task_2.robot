@@ -1,6 +1,6 @@
 *** Settings ***
 Library    Browser    auto_closing_level=KEEP
-Resource   Keywords.robot  
+Resource   keywords2.robot  
 
 *** Test Cases ***
 Login to MyHealth

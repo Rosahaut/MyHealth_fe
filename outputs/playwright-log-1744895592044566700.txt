@@ -1,0 +1,44 @@
+{"level":30,"time":"2025-04-17T13:13:15.289Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"Listening on 54751"}
+(node:9000) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2025-04-17T13:13:15.362Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-04-17T13:13:15.885Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"Adding browser to stack: chromium, version: 134.0.6998.35"}
+{"level":30,"time":"2025-04-17T13:13:15.886Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-04-17T13:13:15.885Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-04-17T13:13:15.890Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-04-17T13:13:15.891Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-04-17T13:13:15.906Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"Changed active context"}
+{"level":30,"time":"2025-04-17T13:13:16.129Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"Video path: undefined"}
+{"level":30,"time":"2025-04-17T13:13:16.130Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"Changed active page"}
+{"level":30,"time":"2025-04-17T13:13:16.468Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"End of node method newPage"}
+{"level":30,"time":"2025-04-17T13:13:16.474Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"Start of node method click"}
+{"level":30,"time":"2025-04-17T13:13:16.474Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"Strict mode is enabled, find Locator with id=openLoginModal in page."}
+{"level":30,"time":"2025-04-17T13:13:16.564Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"End of node method click"}
+{"level":30,"time":"2025-04-17T13:13:16.569Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-04-17T13:13:16.569Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"Strict mode is enabled, find Locator with id=loginModal in page."}
+{"level":30,"time":"2025-04-17T13:13:16.573Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-04-17T13:13:16.577Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-04-17T13:13:16.578Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"Strict mode is enabled, find Locator with css=#loginModal input[name=\"username\"] in page."}
+{"level":30,"time":"2025-04-17T13:13:17.530Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"End of node method typeText"}
+{"level":30,"time":"2025-04-17T13:13:17.537Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-04-17T13:13:17.537Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"Strict mode is enabled, find Locator with css=#loginModal input[name=\"password\"] in page."}
+{"level":30,"time":"2025-04-17T13:13:19.047Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"End of node method typeText"}
+{"level":30,"time":"2025-04-17T13:13:19.054Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"Start of node method click"}
+{"level":30,"time":"2025-04-17T13:13:19.055Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"Strict mode is enabled, find Locator with css=#loginModal button.loginuser in page."}
+{"level":30,"time":"2025-04-17T13:13:19.074Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"End of node method click"}
+{"level":30,"time":"2025-04-17T13:13:19.084Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-04-17T13:13:19.086Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-04-17T13:13:19.088Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-04-17T13:13:19.089Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-04-17T13:13:19.090Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-04-17T13:13:19.091Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-04-17T13:13:19.093Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-04-17T13:13:19.093Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-04-17T13:13:19.095Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"Changed active context"}
+{"level":30,"time":"2025-04-17T13:13:19.095Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"Changing current active page: page=627847ea-352b-4ebd-9a25-0c1986af1898"}
+{"level":30,"time":"2025-04-17T13:13:19.095Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"Changed active page"}
+{"level":30,"time":"2025-04-17T13:13:19.098Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"Start of node method closeContext"}
+{"level":30,"time":"2025-04-17T13:13:19.109Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"Removed page=137a62b6-e76d-4813-90b5-66b3c7e4b52c from context=7e34b91b-dce0-4b28-a254-6e46b3d1452e page stack"}
+{"level":30,"time":"2025-04-17T13:13:19.172Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"End of node method closeContext"}
+{"level":30,"time":"2025-04-17T13:13:24.544Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-04-17T13:13:24.905Z","pid":9000,"hostname":"LAPTOP-PHUP67RL","msg":"End of node method closeAllBrowsers"}
